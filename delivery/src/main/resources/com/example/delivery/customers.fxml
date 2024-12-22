@@ -22,12 +22,10 @@
    <left>
       <AnchorPane prefHeight="305.0" prefWidth="146.0" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="75.0" layoutY="28.0" text="Customer ID" textFill="#e5ff00" />
-            <Label layoutX="72.0" layoutY="59.0" text="Order ID" textFill="#e5ff00" />
-            <Label layoutX="72.0" layoutY="98.0" text="Destination" textFill="#e5ff00" />
-            <Label layoutX="87.0" layoutY="134.0" text="status" textFill="#e5ff00" />
-            <Label layoutX="76.0" layoutY="166.0" text="Vehicle" textFill="#e5ff00" />
-            <Label layoutX="80.0" layoutY="208.0" text="cost" textFill="#e5ff00" />
+            <Label layoutX="88.0" layoutY="30.0" text="customer ID" textFill="#e5ff00" />
+            <Label layoutX="98.0" layoutY="61.0" text="Order ID" textFill="#e5ff00" />
+            <Label layoutX="90.0" layoutY="98.0" text="Destination" textFill="#e5ff00" />
+            <Label layoutX="104.0" layoutY="136.0" text="status" textFill="#e5ff00" />
             <Button fx:id="backButton" layoutX="60.0" layoutY="266.0" mnemonicParsing="false" onAction="#onbackButton" style="-fx-background-color: e5ff00;" text="Back" />
          </children>
       </AnchorPane>
@@ -39,8 +37,6 @@
             <TextField fx:id="orderidfield" layoutX="47.0" layoutY="56.0" onAction="#onorderidfield" promptText="Order ID" />
             <TextField fx:id="destinationfield" layoutX="47.0" layoutY="91.0" onAction="#ondestinationfield" promptText="Destination" />
             <TextField fx:id="statusfield" layoutX="47.0" layoutY="128.0" onAction="#onstatusfield" promptText="status" />
-            <TextField fx:id="vehiclefield" layoutX="47.0" layoutY="169.0" onAction="#onvehiclefield" promptText="Vehicle" />
-            <TextField fx:id="costfield" layoutX="47.0" layoutY="210.0" onAction="#oncostfield" promptText="cost" />
             <Button layoutX="100.0" layoutY="266.0" mnemonicParsing="false" style="-fx-background-color: e5ff00;" text="Button" />
          </children>
       </AnchorPane>

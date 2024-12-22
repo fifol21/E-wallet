@@ -24,17 +24,32 @@ public class Afterlogin {
 
 
     public void onvehicleButton(ActionEvent actionEvent) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("vehicle.fxml"));
-        Stage vehicle_stage = new Stage();
-        vehicle_stage.setTitle("Vehicle data");
-        vehicle_stage.setScene(new Scene(fxmlLoader.load(), 600,400));
-        vehicle_stage.show();
-        Stage stage = (Stage) vehicleButton.getScene().getWindow();
-        stage.close();
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("vehicle.fxml"));
+            Stage vehicle_stage = new Stage();
+            vehicle_stage.setTitle("Vehicle data");
+            vehicle_stage.setScene(new Scene(fxmlLoader.load(), 600, 400));
+            vehicle_stage.show();
+            Stage stage = (Stage) vehicleButton.getScene().getWindow();
+            stage.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
 
     }
 
     public void onordersButton(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("customers.fxml"));
+            Stage order_stage = new Stage();
+            order_stage.setTitle("Customers data");
+            order_stage.setScene(new Scene(fxmlLoader.load(), 600, 400));
+            order_stage.show();
+
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+
 
     }
 
