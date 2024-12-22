@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.delivery.Orders">
+   <top>
+      <AnchorPane prefHeight="95.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="141.0" layoutY="25.0" prefHeight="67.0" prefWidth="332.0" text="MileDeliveEX" textFill="#c0c907">
+               <font>
+                  <Font name="System Bold" size="55.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+   <left>
+      <AnchorPane prefHeight="305.0" prefWidth="146.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="53.0" layoutY="27.0" text="Costumer ID" textFill="#e5ff00" />
+            <Label layoutX="68.0" layoutY="59.0" text="name" textFill="#e5ff00" />
+            <Label layoutX="60.0" layoutY="99.0" text="Address" textFill="#e5ff00" />
+            <Label layoutX="38.0" layoutY="136.0" text="Contact Number" textFill="#e5ff00" />
+            <Label layoutX="59.0" layoutY="166.0" textFill="#e5ff00" />
+            <Label layoutX="63.0" layoutY="207.0" text="Weight" textFill="#e5ff00" />
+            <Button fx:id="backButton" layoutX="60.0" layoutY="266.0" mnemonicParsing="false" onAction="#onbackButton" style="-fx-background-color: e5ff00;" text="Back" />
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="270.0" prefWidth="347.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="costumeridfield" layoutX="47.0" layoutY="21.0" onAction="#oncostumeridfield" promptText="Costumer ID" />
+            <TextField fx:id="namefield" layoutX="47.0" layoutY="56.0" onAction="#onnamefield" promptText="Name" />
+            <TextField fx:id="addressfield" layoutX="47.0" layoutY="91.0" onAction="#onaddressfield" promptText="address" />
+            <TextField layoutX="47.0" layoutY="128.0" promptText="Number" />
+            <TextField layoutX="47.0" layoutY="169.0" promptText="Max capacity" />
+            <TextField layoutX="47.0" layoutY="210.0" promptText="Current weight" />
+            <Button fx:id="resetButton" layoutX="100.0" layoutY="266.0" mnemonicParsing="false" onAction="#onresetButton" style="-fx-background-color: e5ff00;" text="reset" />
+         </children>
+      </AnchorPane>
+   </center>
+   <right>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="nextButton" layoutX="73.0" layoutY="266.0" mnemonicParsing="false" onAction="#onnextButton" style="-fx-background-color: e5ff00;" text="Next" />
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>
