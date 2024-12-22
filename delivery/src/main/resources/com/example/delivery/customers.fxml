@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.delivery.Customers">
+   <top>
+      <AnchorPane prefHeight="95.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="141.0" layoutY="25.0" prefHeight="67.0" prefWidth="332.0" text="MileDeliveEX" textFill="#c0c907">
+               <font>
+                  <Font name="System Bold" size="55.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+   <left>
+      <AnchorPane prefHeight="305.0" prefWidth="146.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="75.0" layoutY="28.0" text="Customer ID" textFill="#e5ff00" />
+            <Label layoutX="72.0" layoutY="59.0" text="Order ID" textFill="#e5ff00" />
+            <Label layoutX="72.0" layoutY="98.0" text="Destination" textFill="#e5ff00" />
+            <Label layoutX="87.0" layoutY="134.0" text="status" textFill="#e5ff00" />
+            <Label layoutX="76.0" layoutY="166.0" text="Vehicle" textFill="#e5ff00" />
+            <Label layoutX="80.0" layoutY="208.0" text="cost" textFill="#e5ff00" />
+            <Button fx:id="backButton" layoutX="60.0" layoutY="266.0" mnemonicParsing="false" onAction="#onbackButton" style="-fx-background-color: e5ff00;" text="Back" />
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="270.0" prefWidth="347.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="customeridfield" layoutX="47.0" layoutY="21.0" onAction="#oncustomerfield" promptText="CustomerID" />
+            <TextField fx:id="orderidfield" layoutX="47.0" layoutY="56.0" onAction="#onorderidfield" promptText="Order ID" />
+            <TextField fx:id="destinationfield" layoutX="47.0" layoutY="91.0" onAction="#ondestinationfield" promptText="Destination" />
+            <TextField fx:id="statusfield" layoutX="47.0" layoutY="128.0" onAction="#onstatusfield" promptText="status" />
+            <TextField fx:id="vehiclefield" layoutX="47.0" layoutY="169.0" onAction="#onvehiclefield" promptText="Vehicle" />
+            <TextField fx:id="costfield" layoutX="47.0" layoutY="210.0" onAction="#oncostfield" promptText="cost" />
+            <Button layoutX="100.0" layoutY="266.0" mnemonicParsing="false" style="-fx-background-color: e5ff00;" text="Button" />
+         </children>
+      </AnchorPane>
+   </center>
+   <right>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="nextButton" layoutX="73.0" layoutY="266.0" mnemonicParsing="false" onAction="#onnextButton" style="-fx-background-color: e5ff00;" text="Next" />
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>
