@@ -4,11 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f3db411b-dc19-43a8-8387-44ea7e9acb9b" name="Changes" comment="" />
+    <list default="true" id="f3db411b-dc19-43a8-8387-44ea7e9acb9b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/QueryExecutor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/mysql-connector-j-9.1.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/E-wallet.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/E-wallet.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/module-info.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -40,17 +56,61 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.HelloApplication.executor": "Run",
+    "Application.JDBC.executor": "Run",
+    "Application.JDBC.java.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "bimber",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/bemma/University/E-wallet/libraries/mysql-connector-j-9.1.0.jar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\bemma\University\E-wallet\libraries" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\bemma\University\E-wallet" />
+      <recent name="C:\Users\bemma\University\E-wallet\delivery" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.delivery" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.JDBC.java">
+    <configuration name="JDBC" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.delivery.JDBC" />
+      <module name="delivery" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JDBC.java" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="23" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="JDBC" />
+      <module name="E-wallet" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.JDBC" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -70,6 +130,8 @@
       <workItem from="1734897238682" duration="29000" />
       <workItem from="1734897287061" duration="967000" />
       <workItem from="1734898712604" duration="158000" />
+      <workItem from="1734901069458" duration="6115000" />
+      <workItem from="1734988715946" duration="2914000" />
     </task>
     <servers />
   </component>
