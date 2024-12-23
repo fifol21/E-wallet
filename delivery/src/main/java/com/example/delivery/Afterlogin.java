@@ -21,16 +21,19 @@ public class Afterlogin {
     private Button vehicleButton;
     @FXML
     private Button customersButton;
+    @FXML
+    private Button ordersButton;
 
 
     public void onvehicleButton(ActionEvent actionEvent) throws IOException {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("vehicle.fxml"));
             Stage vehicle_stage = new Stage();
+            vehicle_stage.setResizable(false);
             vehicle_stage.setTitle("Vehicle data");
             vehicle_stage.setScene(new Scene(fxmlLoader.load(), 600, 400));
             vehicle_stage.show();
-            Stage stage = (Stage) vehicleButton.getScene().getWindow();
+            Stage stage = (Stage) customersButton.getScene().getWindow();
             stage.close();
         }catch (Exception e){
             e.printStackTrace();
@@ -45,6 +48,8 @@ public class Afterlogin {
             order_stage.setTitle("Customers data");
             order_stage.setScene(new Scene(fxmlLoader.load(), 600, 400));
             order_stage.show();
+            Stage stage = (Stage) customersButton.getScene().getWindow();
+            stage.close();
 
         }catch (IOException e){
             e.printStackTrace();
@@ -60,6 +65,8 @@ public class Afterlogin {
             customer_stage.setTitle("Customers data");
             customer_stage.setScene(new Scene(fxmlLoader.load(), 600, 400));
             customer_stage.show();
+            Stage stage = (Stage) ordersButton.getScene().getWindow();
+            stage.close();
 
         }catch (IOException e){
             e.printStackTrace();

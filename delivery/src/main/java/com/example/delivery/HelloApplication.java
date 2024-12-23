@@ -24,8 +24,12 @@ public class HelloApplication extends Application {
     public static void changescene(String fxml) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource(fxml));
         Scene scene = new Scene(fxmlLoader.load(), 600, 400);
-        stg.setScene(scene);
-        stg.show();
+        Stage newstage = new Stage();
+        newstage.setScene(scene);
+        newstage.setTitle("WELCOME TO MileDeliverEx!");
+        newstage.show();
+        stg.close();
+        stg=newstage;
     }
 
     public static void main(String[] args) {
