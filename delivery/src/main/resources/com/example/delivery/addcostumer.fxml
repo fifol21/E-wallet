@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.delivery.Customers">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.delivery.AddCostumer">
    <top>
       <AnchorPane prefHeight="95.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
@@ -22,7 +22,7 @@
    <left>
       <AnchorPane prefHeight="305.0" prefWidth="146.0" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="88.0" layoutY="30.0" text="customer ID" textFill="#e5ff00" />
+            <Label layoutX="88.0" layoutY="28.0" text="customer ID" textFill="#e5ff00" />
             <Label layoutX="98.0" layoutY="61.0" text="Order ID" textFill="#e5ff00" />
             <Label layoutX="90.0" layoutY="98.0" text="Destination" textFill="#e5ff00" />
             <Label layoutX="104.0" layoutY="136.0" text="status" textFill="#e5ff00" />
@@ -37,14 +37,14 @@
             <TextField fx:id="orderidfield" layoutX="47.0" layoutY="56.0" onAction="#onorderidfield" promptText="Order ID" />
             <TextField fx:id="destinationfield" layoutX="47.0" layoutY="91.0" onAction="#ondestinationfield" promptText="Destination" />
             <TextField fx:id="statusfield" layoutX="47.0" layoutY="128.0" onAction="#onstatusfield" promptText="status" />
-            <Button fx:id="addcostumerButton" layoutX="76.0" layoutY="266.0" mnemonicParsing="false" onAction="#onaddcostumerButton" style="-fx-background-color: e5ff00;" text="Add costumer" />
+            <Button fx:id="confirmButton" layoutX="92.0" layoutY="266.0" mnemonicParsing="false" onAction="#onconfirmButton" style="-fx-background-color: e5ff00;" text="Confirm" />
          </children>
       </AnchorPane>
    </center>
    <right>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="nextButton" layoutX="73.0" layoutY="266.0" mnemonicParsing="false" onAction="#onnextButton" style="-fx-background-color: e5ff00;" text="Next" />
+            <Button fx:id="nextButton" layoutX="73.0" layoutY="266.0" mnemonicParsing="false" onAction="#onnextButton" style="-fx-background-color: e5ff00;" text="Remove" />
          </children>
       </AnchorPane>
    </right>
