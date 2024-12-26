@@ -80,3 +80,6 @@ public class HelloController {
     public void onpasswordfield(ActionEvent actionEvent) {
     }
 }
+
+// dlaczego my używamy jakiś klas customers, orders i vehicles??? one obsłuhują poszczególne okna jak np klikaniesz
+// później w customer czy jak to działa? bo I got lost XD

@@ -11,13 +11,13 @@ public class DatabaseConnector {
         String password = "MYsql28@#";
         if(connection == null) {
             try {
-                Connection connection = DriverManager.getConnection(url, user, password);
-
-                Statement statement = connection.createStatement();
-                ResultSet resultSet = statement.executeQuery("SELECT * FROM customers");
+                connection = DriverManager.getConnection(url, user, password);
+                //                Statement statement = connection.createStatement();
+//                ResultSet resultSet = statement.executeQuery("SELECT * FROM customers");
 
             } catch (SQLException e) {
                 e.printStackTrace();
+                throw new RuntimeException("Failed to connect to database");
             }
         }return connection;
     }
