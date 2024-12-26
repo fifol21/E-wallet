@@ -4,12 +4,12 @@ import java.sql.*;
 public class CustomerDAO {
     private Connection connection;
 
-    public CustomerDAO() {
-        this.connection = DatabaseConnector.getConnection();
+    public CustomerDAO(Connection connection_) {
+        this.connection = connection_;
     }
 
     public void saveCustomer(Customer customer) {
-        String sql = "INSERT INFO customers (CUSTOMER_ID, NAME, ADDRESS, CONTACT_NUMBER) values (?,?,?,?)";
+        String sql = "INSERT INTO customers (CUSTOMER_ID, NAME, ADDRESS, CONTACT_NUMBER) values (?,?,?,?)";
         try(PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setInt(1,customer.getCustomerID());
             stmt.setString(2,customer.getName());
