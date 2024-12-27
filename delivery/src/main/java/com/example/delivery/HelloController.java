@@ -38,6 +38,7 @@ public class HelloController {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("after_login.fxml"));
             Stage second_stage = new Stage();
+            second_stage.setResizable(false);
             second_stage.setTitle("Choose action");
             second_stage.setScene(new Scene(fxmlLoader.load(), 600, 400));
             second_stage.show();

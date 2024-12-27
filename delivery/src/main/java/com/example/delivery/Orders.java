@@ -3,14 +3,19 @@ package com.example.delivery;
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class Orders {
+    @FXML
+    private TextField customeridfield;
+    @FXML
     private Button backButton;
 
 
@@ -28,9 +33,12 @@ public class Orders {
     }
 
     public void oncostumeridfield(ActionEvent actionEvent) {
+        String customerid = customeridfield.getText();
+        System.out.println(customerid);
     }
 
     public void onnamefield(ActionEvent actionEvent) {
+
     }
 
     public void onaddressfield(ActionEvent actionEvent) {
