@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a2bfcb86-f3cd-4917-b222-102439c421a0" name="Changes" comment="zmienne wpisywane z pol" />
+    <list default="true" id="f3db411b-dc19-43a8-8387-44ea7e9acb9b" name="Changes" comment="added VehicleDAO and tested customer DAO">
+      <change afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Package.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/PackageDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Tests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Van.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/miniBus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/CustomerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/CustomerDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/OrderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/OrderDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/VehicleDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/VehicleDAO.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,20 +42,19 @@
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
     &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;fifol21&quot;
+    &quot;assignee&quot;: &quot;matbem&quot;
   }
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/fifol21/E-wallet.git&quot;,
-    &quot;accountId&quot;: &quot;ccb7d37e-4aa3-4d12-879f-90d6d6f3cad6&quot;
+    &quot;accountId&quot;: &quot;23169eeb-d81e-47a4-b284-414467fe9b77&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 7
+  &quot;associatedIndex&quot;: 0
 }</component>
-  <component name="ProjectId" id="2qa9x7OhVEu7Bge7SRfBlaBehMr" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="2qaOUkxaKifIj9tBMmeUlAAv0fW" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -49,9 +62,15 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.JDBC.executor&quot;: &quot;Run&quot;,
+    &quot;Application.JDBC.java.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.Tests.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;bimber&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/fifol/IdeaProjects/E-wallet/delivery/src/main/resources/com/example/delivery&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/bemma/University/E-wallet/libraries/mysql-connector-j-9.1.0.jar&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -65,21 +84,38 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/delivery/src/main/resources/com/example/delivery" />
+      <recent name="C:\Users\bemma\University\E-wallet\libraries" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\bemma\University\E-wallet" />
+      <recent name="C:\Users\bemma\University\E-wallet\delivery" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.delivery" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
+    <configuration name="JDBC" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.delivery.JDBC" />
+      <module name="delivery" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <option name="filePath" />
+    <configuration name="JDBC.java" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="23" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="JDBC" />
+      <module name="E-wallet" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.JDBC" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -92,80 +128,64 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a2bfcb86-f3cd-4917-b222-102439c421a0" name="Changes" comment="" />
-      <created>1734890062419</created>
+      <changelist id="f3db411b-dc19-43a8-8387-44ea7e9acb9b" name="Changes" comment="" />
+      <created>1734897237450</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1734890062419</updated>
-      <workItem from="1734890063457" duration="2496000" />
-      <workItem from="1734901075050" duration="1219000" />
-      <workItem from="1734974184953" duration="3501000" />
-      <workItem from="1734992673327" duration="752000" />
-      <workItem from="1735205497189" duration="969000" />
-      <workItem from="1735315800287" duration="15000" />
-      <workItem from="1735332627419" duration="3039000" />
+      <updated>1734897237450</updated>
+      <workItem from="1734897238682" duration="29000" />
+      <workItem from="1734897287061" duration="967000" />
+      <workItem from="1734898712604" duration="158000" />
+      <workItem from="1734901069458" duration="6115000" />
+      <workItem from="1734988715946" duration="3607000" />
+      <workItem from="1735221401922" duration="11190000" />
+      <workItem from="1735248342121" duration="18640000" />
     </task>
-    <task id="LOCAL-00001" summary="commit 1">
+    <task id="LOCAL-00001" summary="added queryExecutor and DatabaseConnector classes">
       <option name="closed" value="true" />
-      <created>1734890158069</created>
+      <created>1734991957102</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1734890158069</updated>
+      <updated>1734991957102</updated>
     </task>
-    <task id="LOCAL-00002" summary="commit 2">
+    <task id="LOCAL-00002" summary="implemented the first DAO to the customer table">
       <option name="closed" value="true" />
-      <created>1734890269752</created>
+      <created>1735228129751</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1734890269752</updated>
+      <updated>1735228129751</updated>
     </task>
-    <task id="LOCAL-00003" summary="commit 3">
+    <task id="LOCAL-00003" summary="added VehicleDAO and tested customer DAO">
       <option name="closed" value="true" />
-      <created>1734894380535</created>
+      <created>1735249965589</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1734894380535</updated>
+      <updated>1735249965589</updated>
     </task>
-    <task id="LOCAL-00004" summary="stage closing">
-      <option name="closed" value="true" />
-      <created>1734976646741</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1734976646741</updated>
-    </task>
-    <task id="LOCAL-00005" summary="stage closing and class addcustomers">
-      <option name="closed" value="true" />
-      <created>1734977688788</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1734977688788</updated>
-    </task>
-    <task id="LOCAL-00006" summary="zmienne wpisywane z pol">
-      <option name="closed" value="true" />
-      <created>1735335593612</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1735335593612</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="commit 1" />
-    <MESSAGE value="commit 2" />
-    <MESSAGE value="commit 3" />
-    <MESSAGE value="stage closing" />
-    <MESSAGE value="stage closing and class addcustomers" />
-    <MESSAGE value="zmienne wpisywane z pol" />
-    <option name="LAST_COMMIT_MESSAGE" value="zmienne wpisywane z pol" />
+    <MESSAGE value="added queryExecutor and DatabaseConnector classes" />
+    <MESSAGE value="implemented the first DAO to the customer table" />
+    <MESSAGE value="added VehicleDAO and tested customer DAO" />
+    <option name="LAST_COMMIT_MESSAGE" value="added VehicleDAO and tested customer DAO" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Tests.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
