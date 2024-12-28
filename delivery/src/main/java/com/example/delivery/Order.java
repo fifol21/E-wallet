@@ -2,19 +2,21 @@ package com.example.delivery;
 
 public class Order {
     private int orderID;
-    private Customer customer;
+    private int customerID;
     private String destination;
     private String status;
-    private Vehicle vehicle;
+    private int vehicleID;
     private float cost;
+    private int packageID;
 
-    public Order(int orderID, Customer customer, String destination, String status, Vehicle vehicle, float cost) {
+    public Order(int orderID, int customerID, String destination, String status, int vehicleID, float cost, int packageID) {
         this.orderID = orderID;
-        this.customer = customer;
+        this.customerID = customerID;
         this.destination = destination;
         this.status = status;
-        this.vehicle = vehicle;
+        this.vehicleID = vehicleID;
         this.cost = cost;
+        this.packageID = packageID;
     }
  // getters and setters
     public int getOrderID() {
@@ -25,12 +27,12 @@ public class Order {
         this.orderID = orderID;
     }
 
-    public Customer getCustomer() {
-        return customer;
+    public int getCustomerID() {
+        return customerID;
     }
 
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
+    public void setCustomer(int customerID) {
+        this.customerID = customerID;
     }
 
     public String getDestination() {
@@ -49,12 +51,12 @@ public class Order {
         this.status = status;
     }
 
-    public Vehicle getVehicle() {
-        return vehicle;
+    public int getVehicleID() {
+        return vehicleID;
     }
 
-    public void setVehicle(Vehicle vehicle) {
-        this.vehicle = vehicle;
+    public void setVehicle(int vehicleID) {
+        this.vehicleID = vehicleID;
     }
 
     public float getCost() {
@@ -63,5 +65,13 @@ public class Order {
 
     public void setCost(float cost) {
         this.cost = cost;
+    }
+
+    public int getPackageID() {
+        return packageID;
+    }
+
+    public void setPackageID(int packageID) {
+        this.packageID = packageID;
     }
 }
