@@ -18,6 +18,9 @@ public class Order {
         this.cost = cost;
         this.packageID = packageID;
     }
+
+
+
  // getters and setters
     public int getOrderID() {
         return orderID;
@@ -73,5 +76,10 @@ public class Order {
 
     public void setPackageID(int packageID) {
         this.packageID = packageID;
+    }
+
+    public void UpdateStatus(String status) {
+        this.status = status;
+
     }
 }

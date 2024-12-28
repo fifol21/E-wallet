@@ -1,4 +1,6 @@
 package com.example.delivery;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Vehicle {
     private int vehicleID;
@@ -15,9 +17,12 @@ public class Vehicle {
         this.capacity = capacity;
     }
 
-    public Vehicle(String type, int capacity) {
+    public Vehicle(int VehicleID,String type, int capacity) {
         this.type = type;
         this.capacity = capacity;
+        this.isAvailable = true;
+        this.load = 0;
+        this.vehicleID = VehicleID;
     }
 
     public void setVehicleID(int vehicleID) {
@@ -58,5 +63,15 @@ public class Vehicle {
 
     public void setCapacity(int capacity) {
         this.capacity = capacity;
+    }
+
+
+    public void markAsAvailable(VehicleDAO vehicleDAO) {
+        this.isAvailable = true;
+        vehicleDAO.updateVehicle(this);
+    }
+
+    public String displayInfo(){
+        return "Vehicle [VehicleID=" + vehicleID + ", Type=" + type + ", Availability=" + isAvailable + ", Load=" + load + "Capacity= " + capacity + "]";
     }
 }

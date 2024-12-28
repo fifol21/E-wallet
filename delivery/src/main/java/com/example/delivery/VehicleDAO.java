@@ -1,5 +1,7 @@
 package com.example.delivery;
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class VehicleDAO {
     private Connection connection;
@@ -66,4 +68,53 @@ public class VehicleDAO {
             e.printStackTrace();
         }
     }
+
+    public Vehicle getLastVehicle(){
+        String sql = "SELECT * FROM vehicle ORDER BY PACKAGE_ID DESC LIMIT 1";
+        try(PreparedStatement stmt = connection.prepareStatement(sql)) {
+            ResultSet rs = stmt.executeQuery();
+            if(rs.next()){
+                return new Vehicle(
+                        rs.getInt("VEHICLE_ID"),
+                        rs.getString("TYPE"),
+                        rs.getBoolean("IS_AVAIBLE"),
+                        rs.getInt("VEHICLE_LOAD"),
+                        rs.getInt("CAPACITY")
+                );
+            }
+        }catch(SQLException e) {
+            e.printStackTrace();
+        }return null;
+    }
+
+    public List<Vehicle> getAllVehicles(){
+        String sql = "SELECT * FROM vehicle";
+        List<Vehicle> vehicles = new ArrayList<>();
+        try (PreparedStatement stmt = connection.prepareStatement(sql)){
+            ResultSet rs = stmt.executeQuery();
+            while(rs.next()){
+                Vehicle vehicle = new Vehicle(
+                        rs.getInt("VEHICLE_ID"),
+                        rs.getString("TYPE"),
+                        rs.getBoolean("IS_AVAIBLE"),
+                        rs.getInt("VEHICLE_LOAD"),
+                        rs.getInt("CAPACITY")
+                );
+                vehicles.add(vehicle);
+            }
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }return vehicles;
+    }
+
+//    public void markVehicleAsAvailable(int vehicleID) {
+//        String sql = "UPDATE vehicle SET IS_AVAIBLE = true WHERE VEHICLE_ID = ?";
+//        try(PreparedStatement stmt = connection.prepareStatement(sql)){
+//            stmt.setInt(1, vehicleID);
+//            stmt.executeUpdate();
+//        }catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//    }
+
 }

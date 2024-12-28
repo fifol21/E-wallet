@@ -78,4 +78,22 @@ public class CustomerDAO {
         }return null;
     }
 
+    public Customer readCustomer(String phoneNumber){
+        String sql = "SELECT * FROM customers WHERE CONTACT_NUMBER=?";
+        try(PreparedStatement stmt = connection.prepareStatement(sql)) {
+            stmt.setString(1,phoneNumber);
+            ResultSet rs = stmt.executeQuery();
+            if(rs.next()) {
+                return new Customer(
+                        rs.getInt("CUSTOMER_ID"),
+                        rs.getString("NAME"),
+                        rs.getString("ADDRESS"),
+                        rs.getString("Contact_NUMBER")
+                );
+            }
+        }catch(SQLException e) {
+            e.printStackTrace();
+        }return null;
+    }
+
 }

@@ -1,5 +1,7 @@
 package com.example.delivery;
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class OrderDAO {
     private Connection connection;
@@ -10,26 +12,26 @@ public class OrderDAO {
 
     public void createOrder(Order order) {
         String sql = "INSERT INTO orders (ORDERS_ID,CUSTOMER,DESTINATION,STATUS,VEHICLE,COST,PACKAGE_ID) VALUES(?,?,?,?,?,?,?)";
-        try(PreparedStatement stmt = connection.prepareStatement(sql)){
-            stmt.setInt(1,order.getOrderID());
-            stmt.setInt(2,order.getCustomerID());
-            stmt.setString(3,order.getDestination());
-            stmt.setString(4,order.getStatus());
-            stmt.setInt(5,order.getVehicleID());
-            stmt.setFloat(6,order.getCost());
-            stmt.setInt(7,order.getPackageID());
+        try (PreparedStatement stmt = connection.prepareStatement(sql)) {
+            stmt.setInt(1, order.getOrderID());
+            stmt.setInt(2, order.getCustomerID());
+            stmt.setString(3, order.getDestination());
+            stmt.setString(4, order.getStatus());
+            stmt.setInt(5, order.getVehicleID());
+            stmt.setFloat(6, order.getCost());
+            stmt.setInt(7, order.getPackageID());
             stmt.executeUpdate();
-        }catch(SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
     public Order readOrder(int orderID, PackageDAO packageDAO) {
         String sql = "SELECT * FROM orders WHERE ORDERS_ID=?";
-        try(PreparedStatement stmt = connection.prepareStatement(sql)){
-            stmt.setInt(1,orderID);
+        try (PreparedStatement stmt = connection.prepareStatement(sql)) {
+            stmt.setInt(1, orderID);
             ResultSet rs = stmt.executeQuery();
-            if(rs.next()) {
+            if (rs.next()) {
                 return new Order(
                         rs.getInt("ORDERS_ID"),
                         rs.getInt("CUSTOMER"),
@@ -40,33 +42,101 @@ public class OrderDAO {
                         rs.getInt("PACKAGE_ID")
                 );
             }
-        }catch(SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
-        }return null;
+        }
+        return null;
     }
 
     public void updateOrder(Order order) {
         String sql = "UPDATE orders SET CUSTOMER = ?, DESTINATION = ?, STATUS = ?, VEHICLE = ?, COST = ? WHERE ORDERS_ID = ?";
-        try(PreparedStatement stmt = connection.prepareStatement(sql)){
-            stmt.setInt(1,order.getCustomerID());
-            stmt.setString(2,order.getDestination());
-            stmt.setString(3,order.getStatus());
-            stmt.setInt(4,order.getVehicleID());
-            stmt.setFloat(5,order.getCost());
-            stmt.setInt(6,order.getOrderID());
+        try (PreparedStatement stmt = connection.prepareStatement(sql)) {
+            stmt.setInt(1, order.getCustomerID());
+            stmt.setString(2, order.getDestination());
+            stmt.setString(3, order.getStatus());
+            stmt.setInt(4, order.getVehicleID());
+            stmt.setFloat(5, order.getCost());
+            stmt.setInt(6, order.getOrderID());
             stmt.executeUpdate();
-        }catch(SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
     public void deleteOrder(int orderID) {
         String sql = "DELETE FROM orders WHERE ORDERS_ID = ?";
-        try(PreparedStatement stmt = connection.prepareStatement(sql)){
-            stmt.setInt(1,orderID);
+        try (PreparedStatement stmt = connection.prepareStatement(sql)) {
+            stmt.setInt(1, orderID);
             stmt.executeUpdate();
-        }catch(SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public Order getLastOrder() {
+        String sql = "SELECT * FROM orders ORDER BY ORDER_ID DESC LIMIT 1";
+        try (PreparedStatement stmt = connection.prepareStatement(sql)) {
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                return new Order(
+                        rs.getInt("ORDERS_ID"),
+                        rs.getInt("CUSTOMER"),
+                        rs.getString("DESTINATION"),
+                        rs.getString("Status"),
+                        rs.getInt("VEHICLE"),
+                        rs.getFloat("COST"),
+                        rs.getInt("PACKAGE_ID")
+                );
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public List<Order> getAllOrders() {
+        String sql = "SELECT * FROM orders";
+        List<Order> orders = new ArrayList<>();
+        try (PreparedStatement stmt = connection.prepareStatement(sql)) {
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+                Order order = new Order(
+                        rs.getInt("ORDERS_ID"),
+                        rs.getInt("CUSTOMER"),
+                        rs.getString("DESTINATION"),
+                        rs.getString("Status"),
+                        rs.getInt("VEHICLE"),
+                        rs.getFloat("COST"),
+                        rs.getInt("PACKAGE_ID")
+                );
+                orders.add(order);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return orders;
+    }
+
+    public List<Order> getPendingOrders(){
+        String sql = "SELECT * FROM orders WHERE STATUS = 'PENDING'";
+        List<Order> orders = new ArrayList<>();
+        try(PreparedStatement stmt = connection.prepareStatement(sql)){
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+                Order order = new Order(
+                        rs.getInt("ORDERS_ID"),
+                        rs.getInt("CUSTOMER"),
+                        rs.getString("DESTINATION"),
+                        rs.getString("Status"),
+                        rs.getInt("VEHICLE"),
+                        rs.getFloat("COST"),
+                        rs.getInt("PACKAGE_ID")
+                );
+                orders.add(order);
+            }
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
+        return orders;
     }
 }

@@ -1,5 +1,7 @@
 package com.example.delivery;
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Tests {
 
@@ -19,7 +21,9 @@ public class Tests {
 //        customerDAO.saveCustomer(nowy_klient);
 //        Order nowy = new Order(1,2,"kraczkowa","Ndadany",2, 50,375);
 //        orderDAO.createOrder(nowy);
-        Order kolejny = new Order(1,2,"kraczkowa","dostarczony",2, 50,375);
-        orderDAO.updateOrder(kolejny);
+//        Order kolejny = new Order(1,2,"kraczkowa","dostarczony",2, 50,375);
+//        orderDAO.updateOrder(kolejny);
+        List<Vehicle> vehicles = vehicleDAO.getAllVehicles();
+        System.out.println(vehicles.get(0).getVehicleID());
     }
 }

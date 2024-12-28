@@ -1,7 +1,8 @@
 package com.example.delivery;
 
 public class Van extends Vehicle {
-    private String type = "Van";
 
-    public Van() {}
+    public Van(int vehicleID) {
+        super(vehicleID,"Van",1000);
+    }
 }
