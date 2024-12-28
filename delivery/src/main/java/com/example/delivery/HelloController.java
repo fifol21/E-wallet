@@ -15,6 +15,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 public class HelloController {
+    private static Stage stg;
     public HelloController() {
 
     }
@@ -40,12 +41,11 @@ public class HelloController {
             second_stage.setTitle("Choose action");
             second_stage.setScene(new Scene(fxmlLoader.load(), 600, 400));
             second_stage.show();
-            // wylacznie okna poprzedniego ??
-            Stage currentStage = (Stage) loginBUTTON.getScene().getWindow();
-            currentStage.close();
+            Stage stage = (Stage) cancelButton.getScene().getWindow();
+            stage.close();
         } catch (IOException e) {
             e.printStackTrace();
-            System.out.println("Error: Unable to load after_login.fxml");
+            System.out.println("Error");
 
         }
     }
@@ -60,14 +60,6 @@ public class HelloController {
     }
 
 
-    public void onvehicleButton(ActionEvent actionEvent) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("vehicle.fxml"));
-        Stage vehicle_stage = new Stage();
-        vehicle_stage.setTitle("Choose action");
-        vehicle_stage.setScene(new Scene(fxmlLoader.load(), 600,400));
-        vehicle_stage.show();
-
-    }
 
 
 
