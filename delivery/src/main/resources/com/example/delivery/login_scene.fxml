@@ -29,7 +29,7 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </Label>
-            <ImageView fitHeight="150.0" fitWidth="145.0" layoutX="60.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="150.0" fitWidth="145.0" layoutX="60.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../../img/klodka.png" />
                </image>
@@ -40,12 +40,18 @@
                </font>
             </Label>
             <TextField fx:id="usernameTEXTFIELD" layoutX="109.0" layoutY="188.0" onAction="#onusernameTEXTFIELD" promptText="username" />
-            <TextField fx:id="onpasswordTEXTFIELD" layoutX="109.0" layoutY="237.0" onAction="#onpasswordTEXTFIELD" promptText="password" />
-            <Button fx:id="LoginBUTTON" layoutX="97.0" layoutY="304.0" mnemonicParsing="false" onAction="#onLoginBUTTON" style="-fx-background-color: yellow;" text="Log in">
+            <Button fx:id="LoginBUTTON" layoutX="97.0" layoutY="304.0" mnemonicParsing="false" onAction="#onLoginBUTTON" prefHeight="26.0" prefWidth="55.0" style="-fx-background-color: yellow;" text="Log in">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
             </Button>
+            <Button fx:id="cancelButton" layoutX="97.0" layoutY="347.0" mnemonicParsing="false" onAction="#oncancelButton" style="-fx-background-color: yellow;" text="Cancel">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Label fx:id="wronglogin" layoutX="111.0" layoutY="147.0" />
+            <TextField fx:id="passwordfield" layoutX="109.0" layoutY="237.0" onAction="#onpasswordfield" promptText="password" />
          </children>
       </AnchorPane>
    </right>
