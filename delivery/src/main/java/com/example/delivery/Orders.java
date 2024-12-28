@@ -71,12 +71,12 @@ public class Orders {
             Scene scene = new Scene(fxmlLoader.load(), 400, 600);
 
             String orderID = orderfield.getText();
-            String customerID = customeridfield.getText();
-            String destination = destinationfield.getText();
-            String status = statusfield.getText();
-            String vehicleID = vehicleidfield.getText();
-            String cost = costfield.getText();
-            String packageID = packageidfield.getText();
+            String customerID = customeridfield.getText().toLowerCase();
+            String destination = destinationfield.getText().toLowerCase();
+            String status = statusfield.getText().toLowerCase();
+            String vehicleID = vehicleidfield.getText().toLowerCase();
+            String cost = costfield.getText().toLowerCase();
+            String packageID = packageidfield.getText().toLowerCase();
 
             AddOrder AddOrderController = fxmlLoader.getController();
 
@@ -86,8 +86,13 @@ public class Orders {
             add_order.setScene(scene);
             add_order.show();
 
-        } catch (Exception e) {
-            e.printStackTrace();
+        }catch (NumberFormatException e) {
+            e.getCause();
+            System.out.println("entered" + e.getCause() + " is in wrong format");
+        }catch (NullPointerException e){
+            e.getCause();;
+        }catch (IOException e){
+            e.getCause();
         }
     }
 

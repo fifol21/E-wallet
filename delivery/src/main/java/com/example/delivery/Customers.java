@@ -59,10 +59,10 @@ public class Customers {
             // czesc ktora pozwala pobierac juz zainicjowane w zmienne wartosci z pol BEZ WYJATKOW DO POPRAWY
             AddCustumer AddCostumerController = fxmlLoader.getController();
 
-            String customerid = customeridfield.getText();
-            String name = namefield.getText();
-            String address = addressfield.getText();
-            String contact = contactfield.getText();
+            String customerid = customeridfield.getText().toLowerCase();
+            String name = namefield.getText().toLowerCase();
+            String address = addressfield.getText().toLowerCase();
+            String contact = contactfield.getText().toLowerCase();
             // tworzenie obiektu z danymi wpisanymi w gui
             Customer newCustomer = new Customer(Integer.parseInt(customerid), name, address, contact);
             System.out.println(newCustomer.DispayInfo());

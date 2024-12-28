@@ -59,4 +59,9 @@ public class Vehicle {
     public void setCapacity(int capacity) {
         this.capacity = capacity;
     }
+
+    public String  DisplayInfo() {
+        return "Vehicle [VehicleID=" + vehicleID + ", type=" + type + ", Available=" + isAvailable + ", load=" + load + ", capacity=" + capacity + "]";
+
+    }
 }

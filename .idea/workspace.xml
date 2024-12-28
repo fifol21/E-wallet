@@ -4,13 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f3db411b-dc19-43a8-8387-44ea7e9acb9b" name="Changes" comment="added new object related to fieldtext from Gui">
+    <list default="true" id="f3db411b-dc19-43a8-8387-44ea7e9acb9b" name="Changes" comment="added new object related to fieldtext from Gui and quick Test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Customers.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Customers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Orders.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Orders.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Vehicles.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Vehicles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/src/main/resources/com/example/delivery/addorder.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/resources/com/example/delivery/addorder.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/src/main/resources/com/example/delivery/customers.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/resources/com/example/delivery/customers.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/src/main/resources/com/example/delivery/vehicle.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/resources/com/example/delivery/vehicle.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/Customers.class" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/Customers.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/HelloApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/HelloApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/HelloController.class" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/HelloController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/Orders.class" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/Orders.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/Vehicle.class" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/Vehicle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/vehicle.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/vehicle.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +183,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735412256854</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added new object related to fieldtext from Gui and quick Test">
+      <option name="closed" value="true" />
+      <created>1735416376351</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1735416376351</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,7 +202,8 @@
     <MESSAGE value="implemented the first DAO to the customer table" />
     <MESSAGE value="added VehicleDAO and tested customer DAO" />
     <MESSAGE value="added new object related to fieldtext from Gui" />
-    <option name="LAST_COMMIT_MESSAGE" value="added new object related to fieldtext from Gui" />
+    <MESSAGE value="added new object related to fieldtext from Gui and quick Test" />
+    <option name="LAST_COMMIT_MESSAGE" value="added new object related to fieldtext from Gui and quick Test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

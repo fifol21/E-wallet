@@ -8,7 +8,7 @@
     <top>
         <AnchorPane prefHeight="95.0" prefWidth="600.0" BorderPane.alignment="CENTER">
             <children>
-                <Label layoutX="141.0" layoutY="25.0" prefHeight="67.0" prefWidth="332.0" text="MileDeliveEX" textFill="#c0c907">
+                <Label layoutX="141.0" layoutY="25.0" prefHeight="67.0" prefWidth="332.0" text="MileDeliverEX" textFill="#c0c907">
                     <font>
                         <Font name="System Bold" size="55.0" />
                     </font>
