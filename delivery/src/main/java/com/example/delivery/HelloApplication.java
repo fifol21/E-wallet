@@ -32,6 +32,13 @@ public class HelloApplication extends Application {
         stg=newstage;
     }
 
+    public void addCustomer(String name, String address, String phone,CustomerDAO customerDAO) {
+        Customer newCustomer = new Customer(name,address,phone,customerDAO);
+        customerDAO.saveCustomer(newCustomer);
+    }
+
+//    public void addVehicle
+
     public static void main(String[] args) {
         launch();
     }
