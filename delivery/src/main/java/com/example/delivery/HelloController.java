@@ -10,12 +10,9 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.scene.control.Button;
 import java.io.IOException;
-import java.net.URL;
-import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 public class HelloController {
-    private static Stage stg;
     public HelloController() {
 
     }

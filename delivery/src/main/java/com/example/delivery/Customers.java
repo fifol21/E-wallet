@@ -65,7 +65,7 @@ public class Customers {
             String contact = contactfield.getText();
             // tworzenie obiektu z danymi wpisanymi w gui
             Customer newCustomer = new Customer(Integer.parseInt(customerid), name, address, contact);
-
+            System.out.println(newCustomer.DispayInfo());
             AddCostumerController.setCustomer(customerid, name, address, contact);
 
             add_costumer_stage.setScene(scene);
@@ -76,7 +76,6 @@ public class Customers {
         }catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 
     public void onnamefield(ActionEvent actionEvent) {
