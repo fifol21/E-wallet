@@ -6,15 +6,18 @@ public class Vehicle {
     private boolean isAvailable;
     private int load;
     private int capacity;
-    private int weight;
 
-    public Vehicle(int vehicleID, String type, boolean available, int load, int capacity, int weight) {
+    public Vehicle(int vehicleID, String type, boolean available, int load, int capacity) {
         this.vehicleID = vehicleID;
         this.type = type;
         this.isAvailable = available;
         this.load = load;
         this.capacity = capacity;
-        this.weight = weight;
+    }
+
+    public Vehicle(String type, int capacity) {
+        this.type = type;
+        this.capacity = capacity;
     }
 
     public void setVehicleID(int vehicleID) {
@@ -55,13 +58,5 @@ public class Vehicle {
 
     public void setCapacity(int capacity) {
         this.capacity = capacity;
-    }
-
-    public int getWeight() {
-        return weight;
-    }
-
-    public void setWeight(int weight) {
-        this.weight = weight;
     }
 }

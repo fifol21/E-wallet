@@ -9,14 +9,13 @@ public class VehicleDAO {
     }
 
     public void createVehicle(Vehicle vehicle) {
-        String sql = "INSERT INTO vehicle (VEHICLE_ID, TYPE, IS_AVAIBLE,LOAD, CAPACITY, WEIGHT) VALUES(?,?,?,?,?,?)";
+        String sql = "INSERT INTO vehicle (VEHICLE_ID, TYPE, IS_AVAIBLE, VEHICLE_LOAD, CAPACITY) VALUES(?,?,?,?,?)";
         try(PreparedStatement stmt = connection.prepareStatement(sql)){
             stmt.setInt(1,vehicle.getVehicleID());
             stmt.setString(2,vehicle.getType());
             stmt.setBoolean(3, vehicle.isAvailable());
             stmt.setInt(4, vehicle.getLoad());
             stmt.setInt(5, vehicle.getCapacity());
-            stmt.setInt(6, vehicle.getWeight());
             stmt.executeUpdate();
         }catch(SQLException e){
             e.printStackTrace();
@@ -33,9 +32,8 @@ public class VehicleDAO {
                         rs.getInt("VEHICLE_ID"),
                         rs.getString("TYPE"),
                         rs.getBoolean("IS_AVAIBLE"),
-                        rs.getInt("LOAD"),
-                        rs.getInt("CAPACITY"),
-                        rs.getInt("WEIGHT")
+                        rs.getInt("VEHICLE_LOAD"),
+                        rs.getInt("CAPACITY")
                 );
             }
 
@@ -46,14 +44,13 @@ public class VehicleDAO {
     }
 
     public void updateVehicle(Vehicle vehicle) {
-        String sql = "UPDATE vehicle SET VEHICLE_ID = ?, TYPE = ?, IS_AVAIBLE = ?, LOAD = ?, CAPACITY = ?, WEIGHT = ? WHERE VEHICLE_ID = ?";
+        String sql = "UPDATE vehicle SET TYPE = ?, IS_AVAIBLE = ?, VEHICLE_LOAD = ?, CAPACITY = ? WHERE VEHICLE_ID = ?";
         try(PreparedStatement stmt = connection.prepareStatement(sql)){
-            stmt.setInt(1,vehicle.getVehicleID());
-            stmt.setString(2,vehicle.getType());
-            stmt.setBoolean(3, vehicle.isAvailable());
-            stmt.setInt(4, vehicle.getLoad());
-            stmt.setInt(5, vehicle.getCapacity());
-            stmt.setInt(6, vehicle.getWeight());
+            stmt.setString(1,vehicle.getType());
+            stmt.setBoolean(2, vehicle.isAvailable());
+            stmt.setInt(3, vehicle.getLoad());
+            stmt.setInt(4, vehicle.getCapacity());
+            stmt.setInt(5,vehicle.getVehicleID());
             stmt.executeUpdate();
         }catch(SQLException e){
             e.printStackTrace();

@@ -14,7 +14,7 @@ public class CustomerDAO {
             stmt.setInt(1,customer.getCustomerID());
             stmt.setString(2,customer.getName());
             stmt.setString(3,customer.getAddress());
-            stmt.setString(4, customer.getAddress());
+            stmt.setString(4, customer.getContactNumber());
             stmt.executeUpdate();
         }catch(SQLException e) {
             e.printStackTrace();
@@ -61,4 +61,21 @@ public class CustomerDAO {
             e.printStackTrace();
         }
     }
+    public Customer getLastCustomer(){
+        String sql = "SELECT * FROM customers ORDER BY PACKAGE_ID DESC LIMIT 1";
+        try(PreparedStatement stmt = connection.prepareStatement(sql)) {
+            ResultSet rs = stmt.executeQuery();
+            if(rs.next()) {
+                return new Customer(
+                        rs.getInt("CUSTOMER_ID"),
+                        rs.getString("NAME"),
+                        rs.getString("ADDRESS"),
+                        rs.getString("Contact_NUMBER")
+                );
+            }
+        }catch(SQLException e) {
+            e.printStackTrace();
+        }return null;
+    }
+
 }

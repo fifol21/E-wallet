@@ -4,15 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f3db411b-dc19-43a8-8387-44ea7e9acb9b" name="Changes" comment="implemented the first DAO to the customer table">
-      <change afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/OrderDAO.java" afterDir="false" />
+    <list default="true" id="f3db411b-dc19-43a8-8387-44ea7e9acb9b" name="Changes" comment="added VehicleDAO and tested customer DAO">
+      <change afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Package.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/PackageDAO.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Tests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/VehicleDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Van.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/miniBus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/CustomerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/CustomerDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/DatabaseConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/DatabaseConnector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/QueryExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/QueryExecutor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/OrderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/OrderDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/VehicleDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/VehicleDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +139,7 @@
       <workItem from="1734901069458" duration="6115000" />
       <workItem from="1734988715946" duration="3607000" />
       <workItem from="1735221401922" duration="11190000" />
-      <workItem from="1735248342121" duration="1532000" />
+      <workItem from="1735248342121" duration="18640000" />
     </task>
     <task id="LOCAL-00001" summary="added queryExecutor and DatabaseConnector classes">
       <option name="closed" value="true" />
@@ -152,7 +157,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735228129751</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added VehicleDAO and tested customer DAO">
+      <option name="closed" value="true" />
+      <created>1735249965589</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1735249965589</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,6 +174,18 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added queryExecutor and DatabaseConnector classes" />
     <MESSAGE value="implemented the first DAO to the customer table" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented the first DAO to the customer table" />
+    <MESSAGE value="added VehicleDAO and tested customer DAO" />
+    <option name="LAST_COMMIT_MESSAGE" value="added VehicleDAO and tested customer DAO" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Tests.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

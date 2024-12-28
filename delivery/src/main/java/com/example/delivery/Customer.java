@@ -13,6 +13,13 @@ public class Customer {
         this.contactNumber = contactNumber;
     }
 
+    public Customer(String name, String address, String contactNumber, CustomerDAO customerDAO) {
+        this.name = name;
+        this.address = address;
+        this.contactNumber = contactNumber;
+        this.customerID = customerDAO.getLastCustomer().getCustomerID()+1;
+    }
+
 // getters and setters
     public int getCustomerID() {
         return customerID;
@@ -46,8 +53,8 @@ public class Customer {
         this.contactNumber = contactNumber;
     }
 
-    @Override
-    public String toString() {
+
+    public String DispayInfo() {
         return "Customer [customerID=" + customerID + ", name=" + name + ", address=" + address + ", contactNumber=" + contactNumber + "]";
     }
 }
