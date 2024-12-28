@@ -22,11 +22,11 @@ public class AddCustumer {
 
     // ustawianie w polach tego co wpisalimy w pola klasy Customers BEZ WYJATKOW DO POPRAWY
 
-    public void setData( String customerid, String orderid, String destination, String status) {
+    public void setCustomer( String customerid, String name, String address, String contact) {
         customeridfield.setText(customerid);
-        orderidfield.setText(orderid);
-        destinationfield.setText(destination);
-        statusfield.setText(status);
+        orderidfield.setText(name);
+        destinationfield.setText(address);
+        statusfield.setText(contact);
 
     }
 

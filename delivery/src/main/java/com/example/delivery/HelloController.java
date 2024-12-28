@@ -60,18 +60,16 @@ public class HelloController {
         scene.close();
     }
 
-
-
-
-
-    public void passwordfield(ActionEvent actionEvent) {
-    }
-
     public void onentry(MouseEvent mouseEvent) {
     }
 
     public void onpasswordfield(ActionEvent actionEvent) {
+        System.out.println("pies");
     }
+    public void onpasswordTEXTFIELD(ActionEvent actionEvent) {
+        System.out.println("Password field action triggered");
+    }
+
 }
 
 // dlaczego my używamy jakiś klas customers, orders i vehicles??? one obsłuhują poszczególne okna jak np klikaniesz
