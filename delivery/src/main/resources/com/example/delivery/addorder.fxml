@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.delivery.AddOrder">
+    <top>
+        <AnchorPane prefHeight="95.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label layoutX="141.0" layoutY="25.0" prefHeight="67.0" prefWidth="332.0" text="MileDeliveEX" textFill="#c0c907">
+                    <font>
+                        <Font name="System Bold" size="55.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+    </top>
+    <left>
+        <AnchorPane prefHeight="305.0" prefWidth="146.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label layoutX="53.0" layoutY="27.0" text="order ID" textFill="#e5ff00" />
+                <Label layoutX="51.0" layoutY="59.0" text="CustomerID" textFill="#e5ff00" />
+                <Label layoutX="60.0" layoutY="99.0" text="Destination" textFill="#e5ff00" />
+                <Label layoutX="66.0" layoutY="136.0" text="Status" textFill="#e5ff00" />
+                <Label layoutX="59.0" layoutY="166.0" textFill="#e5ff00" />
+                <Label layoutX="64.0" layoutY="166.0" text="VehicleID" textFill="#e5ff00" />
+                <Button fx:id="backButton" layoutX="60.0" layoutY="266.0" mnemonicParsing="false" onAction="#onbackButton" style="-fx-background-color: e5ff00;" text="Back" />
+                <Label layoutX="72.0" layoutY="209.0" text="cost" textFill="#eaff00" />
+                <Label layoutX="59.0" layoutY="240.0" text="Package ID" textFill="#fbff00" />
+            </children>
+        </AnchorPane>
+    </left>
+    <center>
+        <AnchorPane prefHeight="270.0" prefWidth="347.0" BorderPane.alignment="CENTER">
+            <children>
+                <TextField fx:id="orderfield" layoutX="47.0" layoutY="21.0" onAction="#onorderidfield" promptText="Order ID" />
+                <TextField fx:id="customeridfield" layoutX="47.0" layoutY="56.0" onAction="#oncostumeridfield" promptText="Customer ID" />
+                <TextField fx:id="destinationfield" layoutX="47.0" layoutY="91.0" onAction="#ondestinationfield" promptText="Destination" />
+                <TextField fx:id="statusfield" layoutX="47.0" layoutY="128.0" onAction="#onstatusfield" promptText="Status" />
+                <TextField fx:id="vehicleidfield" layoutX="47.0" layoutY="161.0" onAction="#onvehicleidfield" promptText="Vehicle ID" />
+                <TextField fx:id="costfield" layoutX="47.0" layoutY="197.0" onAction="#oncostfield" promptText="Cost" />
+                <Button fx:id="onconfirmButton" layoutX="100.0" layoutY="266.0" mnemonicParsing="false" onAction="#onconfirmButton" style="-fx-background-color: e5ff00;" text="Confirm?" />
+                <TextField fx:id="packageidfield" layoutX="47.0" layoutY="234.0" onAction="#onpackageidfield" promptText="Package ID" />
+            </children>
+        </AnchorPane>
+    </center>
+    <right>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="nextButton" layoutX="73.0" layoutY="266.0" mnemonicParsing="false" onAction="#onnextButton" style="-fx-background-color: e5ff00;" text="Next" />
+            </children>
+        </AnchorPane>
+    </right>
+</BorderPane>
