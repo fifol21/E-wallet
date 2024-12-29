@@ -6,12 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="f3db411b-dc19-43a8-8387-44ea7e9acb9b" name="Changes" comment="creating new objects,  exception handlings in few classes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/AddOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/AddOrder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/HelloController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Orders.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Orders.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Vehicles.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Vehicles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/customers.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/customers.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/vehicle.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/vehicle.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/HelloApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/HelloApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/Orders.class" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/Orders.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/Vehicle.class" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/Vehicle.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +45,10 @@
     &quot;accountId&quot;: &quot;ccb7d37e-4aa3-4d12-879f-90d6d6f3cad6&quot;
   }
 }</component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -90,7 +93,7 @@
       <recent name="com.example.delivery" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.JDBC.java">
+  <component name="RunManager">
     <configuration name="JDBC" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.delivery.JDBC" />
       <module name="delivery" />
@@ -209,16 +212,5 @@
     <MESSAGE value="added new object related to fieldtext from Gui and quick Test" />
     <MESSAGE value="creating new objects,  exception handlings in few classes" />
     <option name="LAST_COMMIT_MESSAGE" value="creating new objects,  exception handlings in few classes" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Tests.java</url>
-          <line>12</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

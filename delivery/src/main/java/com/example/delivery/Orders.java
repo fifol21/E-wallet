@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -78,6 +79,10 @@ public class Orders {
             String cost = costfield.getText().toLowerCase();
             String packageID = packageidfield.getText().toLowerCase();
 
+            // check input data
+            checkInput(orderID,customerID,destination,status,vehicleID,cost,packageID);
+
+
             AddOrder AddOrderController = fxmlLoader.getController();
 
             Order newOrder = new Order(Integer.parseInt(orderID), Integer.parseInt(customerID), destination, status, Integer.parseInt(vehicleID), Float.parseFloat(cost), Integer.parseInt(packageID));
@@ -87,14 +92,44 @@ public class Orders {
             add_order.show();
 
         }catch (NumberFormatException e) {
-            e.getCause();
-            System.out.println("entered" + e.getCause() + " is in wrong format");
-        }catch (NullPointerException e){
-            e.getCause();
-        }catch (IOException e){
-            e.getCause();
+            ErrorAlert("Invalid input", "Numeric Error");
             e.printStackTrace();
+
+        }catch (NullPointerException e){
+            ErrorAlert("Class error ", "Class error");
+            e.printStackTrace();
+        }catch (IOException e){
+            e.printStackTrace();
+        }catch (IllegalArgumentException e ){
+            ErrorAlert("Check input Error ", e.getMessage());
         }
+    }
+    public void checkInput(String orderID, String customerID, String destination, String status, String vehicleID, String cost, String packageID) {
+        if (orderID == null|| orderID.isEmpty() || !orderID.matches("[0-9]+$")) {
+            throw new IllegalArgumentException("Error: Order ID is incorrect (it has to be numeric) [123]");
+        }
+        if (customerID==null || customerID.isEmpty()|| !customerID.matches("[0-9]+$")) {
+            throw new IllegalArgumentException("Error :Customer ID is incorrect (it has to be numeric)[123]");
+        }
+        if (destination==null || destination.isEmpty() || destination.matches("[0-9]+$")) {
+            throw new IllegalArgumentException("Error: Destination is empty or should be in format :[abc]");
+        }
+        if (status==null || status.isEmpty() || status.matches("^[0-9]+$")) {
+            throw new IllegalArgumentException("Error: Status is empty or should be in format: [abc]");
+        }
+        if (vehicleID==null || vehicleID.isEmpty()|| !vehicleID.matches("^[0-9]+$")) {
+            throw new IllegalArgumentException("Error: Vehicle ID is incorrect (it has to be numeric) [123]");
+        }
+        if (cost==null || cost.isEmpty() || !cost.matches("^[0-9]+\\.[0-9]+$")){
+            throw new IllegalArgumentException("Error: Cost is incorrect (it has to be decimal) [123.123]");
+        }
+    }
+    public void ErrorAlert(String message, String title) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
     }
 
         public void onpackageidfield (ActionEvent actionEvent){
