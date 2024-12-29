@@ -10,12 +10,9 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.scene.control.Button;
 import java.io.IOException;
-import java.net.URL;
-import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 public class HelloController {
-    private static Stage stg;
     public HelloController() {
 
     }
@@ -42,7 +39,7 @@ public class HelloController {
             second_stage.setTitle("Choose action");
             second_stage.setScene(new Scene(fxmlLoader.load(), 600, 400));
             second_stage.show();
-            Stage stage = (Stage) cancelButton.getScene().getWindow();
+            Stage stage = (Stage) passwordfield.getScene().getWindow();
             stage.close();
         } catch (IOException e) {
             e.printStackTrace();
@@ -60,18 +57,16 @@ public class HelloController {
         scene.close();
     }
 
-
-
-
-
-    public void passwordfield(ActionEvent actionEvent) {
-    }
-
     public void onentry(MouseEvent mouseEvent) {
     }
 
     public void onpasswordfield(ActionEvent actionEvent) {
+        System.out.println("pies");
     }
+    public void onpasswordTEXTFIELD(ActionEvent actionEvent) {
+        System.out.println("Password field action triggered");
+    }
+
 }
 
 // dlaczego my używamy jakiś klas customers, orders i vehicles??? one obsłuhują poszczególne okna jak np klikaniesz

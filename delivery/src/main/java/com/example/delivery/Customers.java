@@ -16,11 +16,13 @@ public class Customers {
     @FXML
     private TextField customeridfield;
     @FXML
-    private TextField orderidfield;
+    private TextField namefield;
     @FXML
-    private TextField destinationfield;
+    private TextField addressfield;
     @FXML
-    private TextField statusfield;
+    private TextField contactfield;
+    @FXML
+    private Button nextButton;
 
 
 
@@ -37,50 +39,51 @@ public class Customers {
     }
 
     public void oncustomerfield(ActionEvent actionEvent) throws IOException {
-        String customerid = customeridfield.getText();
-        System.out.println(customerid);
-
     }
 
-    public void onorderidfield(ActionEvent actionEvent) {
-        String orderid = orderidfield.getText();
-        System.out.println(orderid);
-    }
 
-    public void ondestinationfield(ActionEvent actionEvent) {
-        String destination = destinationfield.getText();
-        System.out.println(destination);
-    }
 
-    public void onstatusfield(ActionEvent actionEvent) {
-        String status = statusfield.getText();
-        System.out.println(status);
-    }
+
 
     public void onnextButton(ActionEvent actionEvent) {
     }
 
     public void onaddcostumerButton(ActionEvent actionEvent) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("addcostumer.fxml"));
-        Stage add_costumer_stage = new Stage();
-        add_costumer_stage.setTitle("Add Costumer");
-        add_costumer_stage.setResizable(false);
-        Scene scene = new Scene(fxmlLoader.load(), 600, 400);
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("addcostumer.fxml"));
+            Stage add_costumer_stage = new Stage();
+            add_costumer_stage.setTitle("Add Costumer");
+            add_costumer_stage.setResizable(false);
+            Scene scene = new Scene(fxmlLoader.load(), 600, 400);
 
-        // czesc ktora pozwala pobierac juz zainicjowane w zmienne wartosci z pol BEZ WYJATKOW DO POPRAWY
-        AddCustumer AddCostumerController = fxmlLoader.getController();
-        String customerid = customeridfield.getText();
-        String orderid = orderidfield.getText();
-        String destination = destinationfield.getText();
-        String status = statusfield.getText();
+            // czesc ktora pozwala pobierac juz zainicjowane w zmienne wartosci z pol BEZ WYJATKOW DO POPRAWY
+            AddCustumer AddCostumerController = fxmlLoader.getController();
 
-        AddCostumerController.setData(customerid, orderid, destination, status);
+            String customerid = customeridfield.getText().toLowerCase();
+            String name = namefield.getText().toLowerCase();
+            String address = addressfield.getText().toLowerCase();
+            String contact = contactfield.getText().toLowerCase();
+            // tworzenie obiektu z danymi wpisanymi w gui
+            Customer newCustomer = new Customer(Integer.parseInt(customerid), name, address, contact);
+            System.out.println(newCustomer.DispayInfo());
+            AddCostumerController.setCustomer(customerid, name, address, contact);
 
-        add_costumer_stage.setScene(scene);
-        add_costumer_stage.show();
+            add_costumer_stage.setScene(scene);
+            add_costumer_stage.show();
+            Stage stage = (Stage) nextButton.getScene().getWindow();
+            stage.close();
+            System.out.println(newCustomer);
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
+    public void onnamefield(ActionEvent actionEvent) {
+    }
 
+    public void onaddressfield(ActionEvent actionEvent) {
+    }
 
-
+    public void oncontactfield(ActionEvent actionEvent) {
     }
 }

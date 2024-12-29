@@ -43,7 +43,7 @@ public class Afterlogin {
 
     public void onordersButton(ActionEvent actionEvent) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("customers.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Orders.fxml"));
             Stage order_stage = new Stage();
             order_stage.setResizable(false);
             order_stage.setTitle("Customers data");
