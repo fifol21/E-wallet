@@ -15,9 +15,12 @@ public class Vehicle {
         this.capacity = capacity;
     }
 
-    public Vehicle(String type, int capacity) {
+    public Vehicle(int VehicleID,String type, int capacity) {
         this.type = type;
         this.capacity = capacity;
+        this.isAvailable = true;
+        this.load = 0;
+        this.vehicleID = VehicleID;
     }
 
     public void setVehicleID(int vehicleID) {
