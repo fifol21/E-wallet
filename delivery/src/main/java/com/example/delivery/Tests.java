@@ -11,6 +11,7 @@ public class Tests {
         OrderDAO orderDAO = new OrderDAO(connection);
         VehicleDAO vehicleDAO = new VehicleDAO(connection);
         PackageDAO packageDAO = new PackageDAO(connection);
+        LoginService loginService = new LoginService(connection);
 
 //        Package paczka = new Package(375,4,"S",false);
 //        packageDAO.createPackage(paczka);
@@ -23,7 +24,8 @@ public class Tests {
 //        orderDAO.createOrder(nowy);
 //        Order kolejny = new Order(1,2,"kraczkowa","dostarczony",2, 50,375);
 //        orderDAO.updateOrder(kolejny);
-        List<Vehicle> vehicles = vehicleDAO.getAllVehicles();
-        System.out.println(vehicles.get(0).getVehicleID());
+//        List<Vehicle> vehicles = vehicleDAO.getAllVehicles();
+//        System.out.println(vehicles.get(0).getVehicleID());
+        System.out.println(loginService.login("worker123","strongPassword"));
     }
 }
