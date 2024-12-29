@@ -43,8 +43,9 @@ public class Afterlogin {
 
     public void onordersButton(ActionEvent actionEvent) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("customers.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Orders.fxml"));
             Stage order_stage = new Stage();
+            order_stage.setResizable(false);
             order_stage.setTitle("Customers data");
             order_stage.setScene(new Scene(fxmlLoader.load(), 600, 400));
             order_stage.show();
@@ -62,6 +63,7 @@ public class Afterlogin {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("customers.fxml"));
             Stage customer_stage = new Stage();
+            customer_stage.setResizable(false);
             customer_stage.setTitle("Customers data");
             customer_stage.setScene(new Scene(fxmlLoader.load(), 600, 400));
             customer_stage.show();
