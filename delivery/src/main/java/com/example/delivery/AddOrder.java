@@ -22,6 +22,8 @@ public class AddOrder {
     private TextField costfield;
     @FXML
     private TextField packageidfield;
+    @FXML
+    private Button backButton;
 
     public void setOrder (String orderID, String customerID, String destination, String status, String vehicleID, String cost, String packageID){
         orderfield.setText(orderID);
@@ -34,7 +36,14 @@ public class AddOrder {
     }
 
 
-    public void onbackButton(ActionEvent actionEvent) {
+    public void onbackButton(ActionEvent actionEvent) throws IOException {
+        try{
+        HelloApplication.changescene("Orders.fxml");
+        Stage stage = (Stage) backButton.getScene().getWindow();
+        stage.close();
+    }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     public void onorderidfield(ActionEvent actionEvent) {

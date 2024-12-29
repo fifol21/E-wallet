@@ -68,7 +68,7 @@ public class Orders {
             Stage add_order = new Stage();
             add_order.setTitle("Add Order");
             add_order.setResizable(false);
-            Scene scene = new Scene(fxmlLoader.load(), 400, 600);
+            Scene scene = new Scene(fxmlLoader.load(), 600 ,400);
 
             String orderID = orderfield.getText();
             String customerID = customeridfield.getText().toLowerCase();
@@ -90,9 +90,10 @@ public class Orders {
             e.getCause();
             System.out.println("entered" + e.getCause() + " is in wrong format");
         }catch (NullPointerException e){
-            e.getCause();;
+            e.getCause();
         }catch (IOException e){
             e.getCause();
+            e.printStackTrace();
         }
     }
 
