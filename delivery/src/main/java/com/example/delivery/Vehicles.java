@@ -109,6 +109,7 @@ public class Vehicles {
         alert.setTitle(title);
         alert.setHeaderText(null);
         alert.setContentText(message);
+        alert.showAndWait();
         }
 
 
