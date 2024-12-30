@@ -39,7 +39,7 @@ public class HelloController {
             second_stage.setTitle("Choose action");
             second_stage.setScene(new Scene(fxmlLoader.load(), 600, 400));
             second_stage.show();
-            Stage stage = (Stage) passwordfield.getScene().getWindow();
+            Stage stage = (Stage) usernameTEXTFIELD.getScene().getWindow();
             stage.close();
         } catch (IOException e) {
             e.printStackTrace();

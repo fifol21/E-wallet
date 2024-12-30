@@ -36,7 +36,7 @@
             <TextField fx:id="availablefield" layoutX="47.0" layoutY="91.0" onAction="#onavailablefield" promptText="Is available?" />
             <TextField fx:id="loadfield" layoutX="47.0" layoutY="128.0" onAction="#onloadfield" promptText="Load" />
             <TextField fx:id="capacityfield" layoutX="47.0" layoutY="169.0" onAction="#oncapacityfield" promptText="Max capacity" />
-            <Button fx:id="addvehicleButton" layoutX="100.0" layoutY="266.0" mnemonicParsing="false" onAction="#onaddvehicleButton" style="-fx-background-color: e5ff00;" text="Add Vehicle" />
+            <Button fx:id="addVehicleButton" layoutX="100.0" layoutY="266.0" mnemonicParsing="false" onAction="#onaddVehicleButton" style="-fx-background-color: e5ff00;" text="Add Vehicle" />
          </children>
       </AnchorPane>
    </center>

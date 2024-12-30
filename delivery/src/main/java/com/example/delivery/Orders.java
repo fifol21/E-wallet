@@ -71,6 +71,7 @@ public class Orders {
             add_order.setResizable(false);
             Scene scene = new Scene(fxmlLoader.load(), 600 ,400);
 
+
             String orderID = orderfield.getText();
             String customerID = customeridfield.getText().toLowerCase();
             String destination = destinationfield.getText().toLowerCase();
@@ -90,6 +91,9 @@ public class Orders {
             AddOrderController.setOrder(orderID, customerID, destination, status, vehicleID, cost, packageID);
             add_order.setScene(scene);
             add_order.show();
+
+            Stage stage = (Stage) costfield.getScene().getWindow();
+            stage.close();
 
         }catch (NumberFormatException e) {
             ErrorAlert("Invalid input", "Numeric Error");
@@ -114,8 +118,8 @@ public class Orders {
         if (destination==null || destination.isEmpty() || destination.matches("[0-9]+$")) {
             throw new IllegalArgumentException("Error: Destination is empty or should be in format :[abc]");
         }
-        if (status==null || status.isEmpty() || status.matches("^[0-9]+$")) {
-            throw new IllegalArgumentException("Error: Status is empty or should be in format: [abc]");
+        if (status==null || status.isEmpty() || !status.matches("^[a-zA-Z]+$")) {
+            throw new IllegalArgumentException("Error: Status is incorrect (it has to be alphanumeric)[123]");
         }
         if (vehicleID==null || vehicleID.isEmpty()|| !vehicleID.matches("^[0-9]+$")) {
             throw new IllegalArgumentException("Error: Vehicle ID is incorrect (it has to be numeric) [123]");
