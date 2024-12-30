@@ -21,6 +21,7 @@ public class VehicleDAO {
             stmt.executeUpdate();
         }catch(SQLException e){
             e.printStackTrace();
+            System.out.println(e.getMessage());
         }
     }
 
@@ -41,6 +42,7 @@ public class VehicleDAO {
 
         }catch(SQLException e){
             e.printStackTrace();
+            System.out.println(e.getMessage());
         }
         return null;
     }
@@ -56,6 +58,7 @@ public class VehicleDAO {
             stmt.executeUpdate();
         }catch(SQLException e){
             e.printStackTrace();
+            System.out.println(e.getMessage());
         }
     }
 
@@ -66,6 +69,7 @@ public class VehicleDAO {
             stmt.executeUpdate();
         }catch(SQLException e){
             e.printStackTrace();
+            System.out.println(e.getMessage());
         }
     }
 
@@ -84,6 +88,7 @@ public class VehicleDAO {
             }
         }catch(SQLException e) {
             e.printStackTrace();
+            System.out.println(e.getMessage());
         }return null;
     }
 
@@ -104,6 +109,7 @@ public class VehicleDAO {
             }
         }catch (SQLException e) {
             e.printStackTrace();
+            System.out.println(e.getMessage());
         }return vehicles;
     }
 

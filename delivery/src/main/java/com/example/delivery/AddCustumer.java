@@ -22,8 +22,8 @@ public class AddCustumer {
 
     // ustawianie w polach tego co wpisalimy w pola klasy Customers BEZ WYJATKOW DO POPRAWY
 
-    public void setCustomer( String customerid, String name, String address, String contact) {
-        customeridfield.setText(customerid);
+    public void setCustomer( String customerID, String name, String address, String contact) {
+        customeridfield.setText(customerID);
         orderidfield.setText(name);
         destinationfield.setText(address);
         statusfield.setText(contact);
