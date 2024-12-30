@@ -71,19 +71,18 @@ public class Vehicles {
             Stage stage = (Stage) nextButton.getScene().getWindow();
             stage.close();
 
-        } catch (NumberFormatException e) {
-            e.getCause();
-            System.out.println("entered" + e.getMessage() + " is in wrong format");
-        } catch (NullPointerException e) {
-            e.getCause();
+        }catch (IllegalArgumentException e) {
+            ErrorAlert( e.getMessage(), "Error");
             e.printStackTrace();
-            System.out.println("Tried to add a null vehicle");
-        } catch (IOException e) {
-            e.getCause();
-            System.out.println(e.getMessage());
+        }catch (NullPointerException e) {
+            ErrorAlert("Error Class:", "Customer is null");
             e.printStackTrace();
-        } catch (IllegalArgumentException e) {
-            ErrorAlert("error", e.getMessage());
+        }catch (IOException e){
+            ErrorAlert("Error:", "FXML load error");
+            e.printStackTrace();
+        }catch (Exception e ) {
+            ErrorAlert("Error:", "Error occured try again");
+            e.printStackTrace();
         }
 
 

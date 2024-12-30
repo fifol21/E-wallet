@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -59,23 +60,59 @@ public class Customers {
             // czesc ktora pozwala pobierac juz zainicjowane w zmienne wartosci z pol BEZ WYJATKOW DO POPRAWY
             AddCustumer AddCostumerController = fxmlLoader.getController();
 
-            String customerid = customeridfield.getText().toLowerCase();
+            String customerID = customeridfield.getText().toLowerCase();
             String name = namefield.getText().toLowerCase();
             String address = addressfield.getText().toLowerCase();
             String contact = contactfield.getText().toLowerCase();
             // tworzenie obiektu z danymi wpisanymi w gui
-            Customer newCustomer = new Customer(Integer.parseInt(customerid), name, address, contact);
+
+            checkInput(customerID, name, address, contact); // input check
+
+            Customer newCustomer = new Customer(Integer.parseInt(customerID), name, address, contact);
             System.out.println(newCustomer.DispayInfo());
-            AddCostumerController.setCustomer(customerid, name, address, contact);
+
+            AddCostumerController.setCustomer(customerID, name, address, contact);
 
             add_costumer_stage.setScene(scene);
             add_costumer_stage.show();
             Stage stage = (Stage) nextButton.getScene().getWindow();
             stage.close();
             System.out.println(newCustomer);
-        }catch (Exception e) {
+        }catch (IllegalArgumentException e) {
+            ErrorAlert( e.getMessage(), "Error");
+            e.printStackTrace();
+        }catch (NullPointerException e) {
+            ErrorAlert("Error Class:", "Customer is null");
+            e.printStackTrace();
+        }catch (IOException e){
+            ErrorAlert("Error:", "FXML load error");
+            e.printStackTrace();
+        }catch (Exception e ){
+            ErrorAlert("Error:", "Error occured try again");
             e.printStackTrace();
         }
+    }
+    public void checkInput(String customerID, String name, String address, String contact) {
+            if (customerID == null || customerID.isEmpty()|| !customerID.matches("^[0-9]+$")){
+                throw new IllegalArgumentException("Error: Customer ID is incorrect (it has to be numeric) [123]");
+            }
+            if (name == null || name.isEmpty()||!name.matches("^[a-zA-Z]+$")){
+                throw new IllegalArgumentException("Error: name is incorrect (it has to be alphanumeric) [abc]");
+
+            }
+            if (address == null || address.isEmpty()||!address.matches("^[a-zA-Z]+$")){
+                throw new IllegalArgumentException("Error: address is incorrect (it has to be alphanumeric) [abc]");
+            }
+            if (contact == null || contact.isEmpty()||!contact.matches("^[0-9]+$")){
+                throw new IllegalArgumentException("Error: contact is incorrect (it has to be numeric) [123]");
+            }
+        }
+    public void ErrorAlert(String message, String title) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
     }
 
     public void onnamefield(ActionEvent actionEvent) {

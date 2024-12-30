@@ -91,17 +91,18 @@ public class Orders {
             add_order.setScene(scene);
             add_order.show();
 
-        }catch (NumberFormatException e) {
-            ErrorAlert("Invalid input", "Numeric Error");
+        }catch (IllegalArgumentException e) {
+            ErrorAlert(e.getMessage(), "Error");
             e.printStackTrace();
-
-        }catch (NullPointerException e){
-            ErrorAlert("Class error ", "Class error");
+        }catch (NullPointerException e) {
+            ErrorAlert("Error Class:", "Customer is null");
             e.printStackTrace();
         }catch (IOException e){
+            ErrorAlert("Error:", "FXML load error");
             e.printStackTrace();
-        }catch (IllegalArgumentException e ){
-            ErrorAlert("Check input Error ", e.getMessage());
+        }catch (Exception e ) {
+            ErrorAlert("Error:", "Error occured try again");
+            e.printStackTrace();
         }
     }
     public void checkInput(String orderID, String customerID, String destination, String status, String vehicleID, String cost, String packageID) {
@@ -112,10 +113,10 @@ public class Orders {
             throw new IllegalArgumentException("Error :Customer ID is incorrect (it has to be numeric)[123]");
         }
         if (destination==null || destination.isEmpty() || destination.matches("[0-9]+$")) {
-            throw new IllegalArgumentException("Error: Destination is empty or should be in format :[abc]");
+            throw new IllegalArgumentException("Error: Destination is incorrect (it has to be alphanumeric)[abc]");
         }
         if (status==null || status.isEmpty() || status.matches("^[0-9]+$")) {
-            throw new IllegalArgumentException("Error: Status is empty or should be in format: [abc]");
+            throw new IllegalArgumentException("Error: Status  is incorrect (it has to be alphanumeric) [abc]");
         }
         if (vehicleID==null || vehicleID.isEmpty()|| !vehicleID.matches("^[0-9]+$")) {
             throw new IllegalArgumentException("Error: Vehicle ID is incorrect (it has to be numeric) [123]");

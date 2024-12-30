@@ -60,11 +60,9 @@ public class HelloController {
     public void onentry(MouseEvent mouseEvent) {
     }
 
-    public void onpasswordfield(ActionEvent actionEvent) {
-        System.out.println("pies");
+    public void onpasswordfield(ActionEvent actionEvent){
     }
     public void onpasswordTEXTFIELD(ActionEvent actionEvent) {
-        System.out.println("Password field action triggered");
     }
 
 }
