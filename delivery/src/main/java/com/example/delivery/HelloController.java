@@ -34,14 +34,21 @@ public class HelloController {
 
     public void onLoginBUTTON(ActionEvent actionEvent)  throws IOException {
         try { // jesli dobre logowanie- zwraca true i wywoluje sie FXML, jesli false wywala wyjatek i wywala metode ErrorLogin_Alert
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("after_login.fxml"));
-            Stage second_stage = new Stage();
-            second_stage.setResizable(false);
-            second_stage.setTitle("Choose action");
-            second_stage.setScene(new Scene(fxmlLoader.load(), 600, 400));
-            second_stage.show();
-            Stage stage = (Stage) usernameTEXTFIELD.getScene().getWindow();
-            stage.close();
+            String password = passwordfield.getText();
+            String username = usernameTEXTFIELD.getText();
+
+            if(AppContext.getLoginService().login(username, password)) {
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("after_login.fxml"));
+                Stage second_stage = new Stage();
+                second_stage.setResizable(false);
+                second_stage.setTitle("Choose action");
+                second_stage.setScene(new Scene(fxmlLoader.load(), 600, 400));
+                second_stage.show();
+                Stage stage = (Stage) usernameTEXTFIELD.getScene().getWindow();
+                stage.close();
+            }else{
+                ErrorLogin_Alert("Z dupy jestes","Wrong Credentials");
+            }
         } catch (IOException e) {
             e.printStackTrace();
             System.out.println("Error");
