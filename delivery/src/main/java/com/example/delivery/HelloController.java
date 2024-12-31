@@ -5,6 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
@@ -32,7 +33,7 @@ public class HelloController {
 
 
     public void onLoginBUTTON(ActionEvent actionEvent)  throws IOException {
-        try {
+        try { // jesli dobre logowanie- zwraca true i wywoluje sie FXML, jesli false wywala wyjatek i wywala metode ErrorLogin_Alert
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("after_login.fxml"));
             Stage second_stage = new Stage();
             second_stage.setResizable(false);
@@ -63,6 +64,13 @@ public class HelloController {
     public void onpasswordfield(ActionEvent actionEvent){
     }
     public void onpasswordTEXTFIELD(ActionEvent actionEvent) {
+    }
+
+    public void ErrorLogin_Alert(String message, String title) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle(title);
+        alert.setHeaderText(message);
+        alert.showAndWait();
     }
 
 }
