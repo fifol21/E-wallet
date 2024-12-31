@@ -89,7 +89,7 @@ public class Orders {
 
             AddOrder AddOrderController = fxmlLoader.getController();
 
-            HelloApplication.createOrder(phonenumber,name,address,status,destination, size, weight, iffragile,AppContext.getCustomerDAO(),AppContext.getPackageDAO(), AppContext.getOrderDAO(),AppContext.getVehicleDAO());
+            HelloApplication.createOrder(phonenumber,name,address,status,destination, size, Float.parseFloat(weight), Boolean.parseBoolean(iffragile),AppContext.getCustomerDAO(),AppContext.getPackageDAO(), AppContext.getOrderDAO(),AppContext.getVehicleDAO());
             AddOrderController.setOrder(orderID, customerID, destination, status, vehicleID, cost, packageID);
             add_order.setScene(scene);
             add_order.show();
