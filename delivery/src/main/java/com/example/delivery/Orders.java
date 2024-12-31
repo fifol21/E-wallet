@@ -64,7 +64,7 @@ public class Orders {
 
     public void onaddorderButton(ActionEvent actionEvent) throws IOException {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("addorder.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("addorder(ok).fxml"));
             Stage add_order = new Stage();
             add_order.setTitle("Add Order");
             add_order.setResizable(false);
@@ -89,8 +89,10 @@ public class Orders {
 
             AddOrder AddOrderController = fxmlLoader.getController();
 
-            HelloApplication.createOrder(phonenumber,name,address,status,destination, size, Float.parseFloat(weight), Boolean.parseBoolean(iffragile),AppContext.getCustomerDAO(),AppContext.getPackageDAO(), AppContext.getOrderDAO(),AppContext.getVehicleDAO());
-            AddOrderController.setOrder(orderID, customerID, destination, status, vehicleID, cost, packageID);
+
+
+
+            AddOrderController.setOrder(phonenumber,name,address,size,destination,status,weight, iffragile);
             add_order.setScene(scene);
             add_order.show();
 

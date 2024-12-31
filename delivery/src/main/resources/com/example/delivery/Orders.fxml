@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.delivery.Orders">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.delivery.Orders">
    <top>
       <AnchorPane prefHeight="95.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
@@ -30,9 +27,8 @@
             <Label layoutX="128.0" layoutY="129.0" text="Address" textFill="#e5ff00" />
             <Button fx:id="backButton" layoutX="39.0" layoutY="279.0" mnemonicParsing="false" onAction="#onbackButton" style="-fx-background-color: e5ff00;" text="Back" />
             <Label layoutX="127.0" layoutY="166.0" text="Size" textFill="#eaff00" />
-            <Label layoutX="108.0" layoutY="195.0" text="Package ID" textFill="#fbff00" />
-            <Label layoutX="112.0" layoutY="224.0" text="Weight" textFill="#d2fc4b" />
-            <Label layoutX="116.0" layoutY="254.0" text="If Fragile" textFill="#deff0b" />
+            <Label layoutX="127.0" layoutY="199.0" text="Weight" textFill="#d2fc4b" />
+            <Label layoutX="116.0" layoutY="234.0" text="If Fragile" textFill="#deff0b" />
          </children>
       </AnchorPane>
    </left>
@@ -46,9 +42,8 @@
             <TextField fx:id="addressfield" layoutX="45.0" layoutY="128.0" onAction="#onaddressfield" promptText="Address" />
             <TextField fx:id="sizefield" layoutX="45.0" layoutY="161.0" onAction="#onsizefield" promptText="SIze" />
             <Button fx:id="onaddorderButton" layoutX="96.0" layoutY="279.0" mnemonicParsing="false" onAction="#onaddorderButton" style="-fx-background-color: e5ff00;" text="Add Order" />
-            <TextField fx:id="packageidfield" layoutX="45.0" layoutY="193.0" onAction="#onpackageidfield" promptText="Package ID" />
-            <TextField fx:id="weightfield" layoutX="45.0" layoutY="225.0" onAction="#onweightfield" promptText="Weight" />
-            <TextField fx:id="iffragilefield" layoutX="45.0" layoutY="250.0" onAction="#iffragilefield" promptText="If Fragile?" />
+            <TextField fx:id="weightfield" layoutX="45.0" layoutY="199.0" onAction="#onweightfield" promptText="Weight" />
+            <TextField fx:id="iffragilefield" layoutX="45.0" layoutY="234.0" onAction="#iffragilefield" promptText="If Fragile?" />
          </children>
       </AnchorPane>
    </center>
