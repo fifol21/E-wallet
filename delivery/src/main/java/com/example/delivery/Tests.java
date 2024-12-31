@@ -6,12 +6,7 @@ import java.util.List;
 public class Tests {
 
     public static void main(String[] args){
-        Connection connection = DatabaseConnector.getConnection();
-        CustomerDAO customerDAO = new CustomerDAO(connection);
-        OrderDAO orderDAO = new OrderDAO(connection);
-        VehicleDAO vehicleDAO = new VehicleDAO(connection);
-        PackageDAO packageDAO = new PackageDAO(connection);
-        LoginService loginService = new LoginService(connection);
+
 
 //        Package paczka = new Package(375,4,"S",false);
 //        packageDAO.createPackage(paczka);
@@ -26,6 +21,7 @@ public class Tests {
 //        orderDAO.updateOrder(kolejny);
 //        List<Vehicle> vehicles = vehicleDAO.getAllVehicles();
 //        System.out.println(vehicles.get(0).getVehicleID());
-        System.out.println(loginService.login("worker123","strongPassword"));
+//        System.out.println(AppContext.getLoginService().login("worker123","strongPassword"));
+        System.out.println(AppContext.getCustomerDAO().getLastCustomer().getCustomerID());
     }
 }

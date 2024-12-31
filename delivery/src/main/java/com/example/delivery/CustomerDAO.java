@@ -74,7 +74,7 @@ public class CustomerDAO {
         }
     }
     public Customer getLastCustomer(){
-        String sql = "SELECT * FROM customers ORDER BY PACKAGE_ID DESC LIMIT 1";
+        String sql = "SELECT * FROM customers ORDER BY CUSTOMER_ID DESC LIMIT 1";
         try(PreparedStatement stmt = connection.prepareStatement(sql)) {
             ResultSet rs = stmt.executeQuery();
             if(rs.next()) {

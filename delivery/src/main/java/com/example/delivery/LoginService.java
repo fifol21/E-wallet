@@ -12,7 +12,9 @@ public class LoginService {
     public static LoginService getInstance(Connection connection) {
         if (instance == null) {
             synchronized (LoginService.class) {
-                if (instance == null) {}
+                if (instance == null) {
+                    instance = new LoginService(connection);
+                }
             }
         }
         return instance;

@@ -61,15 +61,14 @@ public class Customers {
             AddCustumer AddCostumerController = fxmlLoader.getController();
 
             String customerID = customeridfield.getText().toLowerCase();
-            String name = namefield.getText().toLowerCase();
-            String address = addressfield.getText().toLowerCase();
-            String contact = contactfield.getText().toLowerCase();
+            String name = namefield.getText();
+            String address = addressfield.getText();
+            String contact = contactfield.getText();
+
             // tworzenie obiektu z danymi wpisanymi w gui
 
-            checkInput(customerID, name, address, contact); // input check
-
-            Customer newCustomer = new Customer(Integer.parseInt(customerID), name, address, contact);
-            System.out.println(newCustomer.DispayInfo());
+            checkInput(name, address, contact); // input check
+//            System.out.println(newCustomer.DispayInfo());
 
             AddCostumerController.setCustomer(customerID, name, address, contact);
 
@@ -77,7 +76,7 @@ public class Customers {
             add_costumer_stage.show();
             Stage stage = (Stage) nextButton.getScene().getWindow();
             stage.close();
-            System.out.println(newCustomer);
+//            System.out.println(newCustomer);
         }catch (IllegalArgumentException e) {
             ErrorAlert( e.getMessage(), "Error");
             e.printStackTrace();
@@ -92,10 +91,10 @@ public class Customers {
             e.printStackTrace();
         }
     }
-    public void checkInput(String customerID, String name, String address, String contact) {
-            if (customerID == null || customerID.isEmpty()|| !customerID.matches("^[0-9]+$")){
-                throw new IllegalArgumentException("Error: Customer ID is incorrect (it has to be numeric) [123]");
-            }
+    public void checkInput(String name, String address, String contact) {
+//            if (customerID == null || customerID.isEmpty()|| !customerID.matches("^[0-9]+$")){
+//                throw new IllegalArgumentException("Error: Customer ID is incorrect (it has to be numeric) [123]");
+//            }
             if (name == null || name.isEmpty()||!name.matches("^[a-zA-Z]+$")){
                 throw new IllegalArgumentException("Error: name is incorrect (it has to be alphanumeric) [abc]");
 

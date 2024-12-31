@@ -12,6 +12,8 @@ public class AddCustumer {
     @FXML
     private Button backButton;
     @FXML
+    private Button confirmButton;
+    @FXML
     private TextField customeridfield;
     @FXML
     private TextField orderidfield;
@@ -43,7 +45,19 @@ public class AddCustumer {
         }
 
     public void onconfirmButton(ActionEvent actionEvent) {
+        try {
+            String name = orderidfield.getText();
+            String address = destinationfield.getText();
+            String contact = statusfield.getText();
 
+            Customer newCustomer = new Customer(name, address, contact, AppContext.getCustomerDAO());
+            AppContext.getCustomerDAO().saveCustomer(newCustomer);
+
+            Stage stage = (Stage) confirmButton.getScene().getWindow();
+            stage.close();
+        }catch(Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public void onnextButton(ActionEvent actionEvent) {
