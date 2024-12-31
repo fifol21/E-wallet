@@ -6,17 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="f3db411b-dc19-43a8-8387-44ea7e9acb9b" name="Changes" comment="added singleton pattern">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/AddCustumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/AddCustumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/CustomerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/CustomerDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Customers.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Customers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/LoginService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Tests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/AddCustumer.class" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/AddCustumer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/Customers.class" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/Customers.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/HelloApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/HelloApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/HelloController.class" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/HelloController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/Orders.class" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/Orders.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/AddOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/AddOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Orders.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Orders.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +91,7 @@
       <recent name="com.example.delivery" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.JDBC.java">
     <configuration name="JDBC" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.delivery.JDBC" />
       <module name="delivery" />

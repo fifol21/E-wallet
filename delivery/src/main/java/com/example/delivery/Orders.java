@@ -85,8 +85,6 @@ public class Orders {
 
             AddOrder AddOrderController = fxmlLoader.getController();
 
-            Order newOrder = new Order(Integer.parseInt(orderID), Integer.parseInt(customerID), destination, status, Integer.parseInt(vehicleID), Float.parseFloat(cost), Integer.parseInt(packageID));
-
             AddOrderController.setOrder(orderID, customerID, destination, status, vehicleID, cost, packageID);
             add_order.setScene(scene);
             add_order.show();

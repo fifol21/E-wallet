@@ -33,6 +33,7 @@ public class AddOrder {
         vehicleidfield.setText(vehicleID);
         costfield.setText(cost);
         packageidfield.setText(packageID);
+
     }
 
 
@@ -71,5 +72,12 @@ public class AddOrder {
     }
 
     public void onconfirmButton(ActionEvent actionEvent) {
+        String OrderID = orderfield.getText();
+        String CustomerID = customeridfield.getText();
+        String Destination = destinationfield.getText();
+        String Status = statusfield.getText();
+        String VehicleID = vehicleidfield.getText();
+        String Cost = costfield.getText();
+        String PackageID = packageidfield.getText();
     }
 }

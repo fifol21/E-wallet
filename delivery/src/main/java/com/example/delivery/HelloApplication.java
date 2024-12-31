@@ -61,10 +61,9 @@ public class HelloApplication extends Application {
         }return -1;
     }
 
-    public void createOrder(String customerPhoneNumber, String name, String address, String destination, String size, float weight, boolean ifFragile, CustomerDAO customerDAO,PackageDAO packageDAO,OrderDAO orderDAO, VehicleDAO vehicleDAO) {
+    public void createOrder(String customerPhoneNumber, String name, String address,String status, String destination, String size, float weight, boolean ifFragile, CustomerDAO customerDAO,PackageDAO packageDAO,OrderDAO orderDAO, VehicleDAO vehicleDAO) {
         int customerID;
         int orderID;
-        String status;
         int vehicleID;
         float cost;
         int packageID;
@@ -81,7 +80,6 @@ public class HelloApplication extends Application {
         packageDAO.createPackage(pack);
         packageID = pack.getPackageId();
         cost = pack.calculateCost();
-        status = "ACCEPTED";
         vehicleID = AssignVehicle(vehicleDAO, weight);
         orderID = orderDAO.getLastOrder().getOrderID()+1;
 
