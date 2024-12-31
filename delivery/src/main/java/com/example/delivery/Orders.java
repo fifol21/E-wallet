@@ -106,13 +106,13 @@ public class Orders {
         }
     }
     public void checkInput(String orderID, String customerID, String destination, String status, String vehicleID, String cost, String packageID) {
-        if (orderID == null|| orderID.isEmpty() || !orderID.matches("[0-9]+$")) {
+        if (orderID == null|| orderID.isEmpty() || !orderID.matches("^[0-9]+$")) {
             throw new IllegalArgumentException("Error: Order ID is incorrect (it has to be numeric) [123]");
         }
-        if (customerID==null || customerID.isEmpty()|| !customerID.matches("[0-9]+$")) {
+        if (customerID==null || customerID.isEmpty()|| !customerID.matches("^[0-9]+$")) {
             throw new IllegalArgumentException("Error :Customer ID is incorrect (it has to be numeric)[123]");
         }
-        if (destination==null || destination.isEmpty() || destination.matches("[0-9]+$")) {
+        if (destination==null || destination.isEmpty() || destination.matches("^[0-9]+$")) {
             throw new IllegalArgumentException("Error: Destination is incorrect (it has to be alphanumeric)[abc]");
         }
         if (status==null || status.isEmpty() || status.matches("^[0-9]+$")) {
