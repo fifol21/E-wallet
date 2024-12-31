@@ -48,7 +48,7 @@ public class HelloApplication extends Application {
             vehicleDAO.createVehicle(van);
         }
     }
-    public int AssignVehicle(VehicleDAO vehicleDAO, float weight) {
+    public static int AssignVehicle(VehicleDAO vehicleDAO, float weight) {
         List<Vehicle> vehicles = vehicleDAO.getAllVehicles();
         for(Vehicle vehicle : vehicles) {
             if(vehicle.isAvailable() && (vehicle.getLoad() + weight <= vehicle.getCapacity())) {
@@ -61,7 +61,7 @@ public class HelloApplication extends Application {
         }return -1;
     }
 
-    public void createOrder(String customerPhoneNumber, String name, String address, String destination, String size, float weight, boolean ifFragile, CustomerDAO customerDAO,PackageDAO packageDAO,OrderDAO orderDAO, VehicleDAO vehicleDAO) {
+    public static void createOrder(String customerPhoneNumber, String name, String address, String destination, String size, float weight, boolean ifFragile, CustomerDAO customerDAO,PackageDAO packageDAO,OrderDAO orderDAO, VehicleDAO vehicleDAO) {
         int customerID;
         int orderID;
         String status;

@@ -17,19 +17,22 @@ public class Orders {
     @FXML
     private Button addorderButton;
     @FXML
-    private TextField orderfield;
+    private TextField phonenumberfield;
     @FXML
-    private TextField customeridfield;
+    private TextField namefield;
+    @FXML
+    private TextField addressfield;
     @FXML
     private TextField destinationfield;
     @FXML
     private TextField statusfield;
     @FXML
-    private TextField vehicleidfield;
+    private TextField sizefield;
     @FXML
-    private TextField costfield;
+    private TextField weightfield;
     @FXML
-    private TextField packageidfield;
+    private TextField iffragilefield;
+
 
 
     public void onbackButton(ActionEvent actionEvent) throws IOException {
@@ -45,11 +48,9 @@ public class Orders {
     public void onnextButton(ActionEvent actionEvent) {
     }
 
-    public void onorderidfield(ActionEvent actionEvent) {
-    }
 
-    public void oncostumeridfield(ActionEvent actionEvent) {
-    }
+
+
 
     public void ondestinationfield(ActionEvent actionEvent) {
     }
@@ -57,11 +58,9 @@ public class Orders {
     public void onstatusfield(ActionEvent actionEvent) {
     }
 
-    public void onvehicleidfield(ActionEvent actionEvent) {
-    }
 
-    public void oncostfield(ActionEvent actionEvent) {
-    }
+
+
 
     public void onaddorderButton(ActionEvent actionEvent) throws IOException {
         try {
@@ -71,22 +70,26 @@ public class Orders {
             add_order.setResizable(false);
             Scene scene = new Scene(fxmlLoader.load(), 600 ,400);
 
-            String orderID = orderfield.getText();
-            String customerID = customeridfield.getText().toLowerCase();
-            String destination = destinationfield.getText().toLowerCase();
-            String status = statusfield.getText().toLowerCase();
-            String vehicleID = vehicleidfield.getText().toLowerCase();
-            String cost = costfield.getText().toLowerCase();
-            String packageID = packageidfield.getText().toLowerCase();
+            String phonenumber = phonenumberfield.getText();
+            String name = namefield.getText();
+            String address = addressfield.getText();
+            String destination = destinationfield.getText();
+            String status = statusfield.getText();
+            String weight = weightfield.getText();
+            String iffragile = iffragilefield.getText();
+            String size = sizefield.getText();
+
+
+
+
 
             // check input data
-            checkInput(orderID,customerID,destination,status,vehicleID,cost,packageID);
+            checkInput(phonenumber, name, address, destination, status, weight, iffragile);
 
 
             AddOrder AddOrderController = fxmlLoader.getController();
 
-            Order newOrder = new Order(Integer.parseInt(orderID), Integer.parseInt(customerID), destination, status, Integer.parseInt(vehicleID), Float.parseFloat(cost), Integer.parseInt(packageID));
-
+            HelloApplication.createOrder(phonenumber,name,address,status,destination, size, weight, iffragile,AppContext.getCustomerDAO(),AppContext.getPackageDAO(), AppContext.getOrderDAO(),AppContext.getVehicleDAO());
             AddOrderController.setOrder(orderID, customerID, destination, status, vehicleID, cost, packageID);
             add_order.setScene(scene);
             add_order.show();
@@ -105,12 +108,13 @@ public class Orders {
             e.printStackTrace();
         }
     }
+    // poprawic te wyjatki, zeby byly zgodne z name phone itp
     public void checkInput(String orderID, String customerID, String destination, String status, String vehicleID, String cost, String packageID) {
         if (orderID == null|| orderID.isEmpty() || !orderID.matches("^[0-9]+$")) {
             throw new IllegalArgumentException("Error: Order ID is incorrect (it has to be numeric) [123]");
         }
         if (customerID==null || customerID.isEmpty()|| !customerID.matches("^[0-9]+$")) {
-            throw new IllegalArgumentException("Error :Customer ID is incorrect (it has to be numeric)[123]");
+            throw new IllegalArgumentException("Error: Customer ID is incorrect (it has to be numeric)[123]");
         }
         if (destination==null || destination.isEmpty() || destination.matches("^[0-9]+$")) {
             throw new IllegalArgumentException("Error: Destination is incorrect (it has to be alphanumeric)[abc]");
@@ -133,7 +137,23 @@ public class Orders {
         alert.showAndWait();
     }
 
-        public void onpackageidfield (ActionEvent actionEvent){
-        }
+
+    public void onphonenumberfield(ActionEvent actionEvent) {
     }
+
+    public void onnamefield(ActionEvent actionEvent) {
+    }
+
+    public void onaddressfield(ActionEvent actionEvent) {
+    }
+
+    public void onsizefield(ActionEvent actionEvent) {
+    }
+
+    public void onweightfield(ActionEvent actionEvent) {
+    }
+
+    public void iffragilefield(ActionEvent actionEvent) {
+    }
+}
 
