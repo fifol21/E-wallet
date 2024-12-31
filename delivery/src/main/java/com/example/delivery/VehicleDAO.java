@@ -5,9 +5,21 @@ import java.util.List;
 
 public class VehicleDAO {
     private Connection connection;
+    private static VehicleDAO instance;
 
-    public VehicleDAO(Connection connection_) {
+    private VehicleDAO(Connection connection_) {
         this.connection = connection_;
+    }
+
+    public static VehicleDAO getInstance(Connection connection_) {
+        if (instance == null) {
+            synchronized (VehicleDAO.class) {
+                if (instance == null) {
+                    instance = new VehicleDAO(connection_);
+                }
+            }
+        }
+        return instance;
     }
 
     public void createVehicle(Vehicle vehicle) {

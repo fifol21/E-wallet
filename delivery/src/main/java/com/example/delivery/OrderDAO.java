@@ -5,9 +5,21 @@ import java.util.List;
 
 public class OrderDAO {
     private Connection connection;
+    private static OrderDAO instance;
 
-    public OrderDAO(Connection connection_) {
+    private OrderDAO(Connection connection_) {
         this.connection = connection_;
+    }
+
+    public static OrderDAO getInstance(Connection connection_) {
+        if (instance == null) {
+            synchronized (OrderDAO.class) {
+                if(instance == null) {
+                    instance = new OrderDAO(connection_);
+                }
+            }
+        }
+        return instance;
     }
 
     public void createOrder(Order order) {

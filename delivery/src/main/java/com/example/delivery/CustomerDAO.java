@@ -3,9 +3,21 @@ import java.sql.*;
 
 public class CustomerDAO {
     private Connection connection;
+    private static CustomerDAO instance;
 
-    public CustomerDAO(Connection connection_) {
+    private CustomerDAO(Connection connection_) {
         this.connection = connection_;
+    }
+
+    public static CustomerDAO getInstance(Connection connection) {
+        if (instance == null) {
+            synchronized (CustomerDAO.class) {
+                if (instance == null) {
+                    instance = new CustomerDAO(connection);
+                }
+            }
+        }
+        return instance;
     }
 
     public void saveCustomer(Customer customer) {

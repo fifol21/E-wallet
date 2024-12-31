@@ -7,9 +7,21 @@ import java.sql.SQLException;
 
 public class PackageDAO {
     private Connection connection;
+    private static PackageDAO instance;
 
-    public PackageDAO(Connection connection_) {
+    private PackageDAO(Connection connection_) {
         this.connection = connection_;
+    }
+
+    public static PackageDAO getInstance(Connection connection_) {
+        if (instance == null) {
+            synchronized (PackageDAO.class) {
+                if (instance == null) {
+                    instance = new PackageDAO(connection_);
+                }
+            }
+        }
+        return instance;
     }
 
     public void createPackage(Package pack) {

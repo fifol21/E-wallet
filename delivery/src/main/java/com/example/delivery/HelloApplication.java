@@ -106,11 +106,5 @@ public class HelloApplication extends Application {
 
     public static void main(String[] args) {
         launch();
-        Connection connection = DatabaseConnector.getConnection();
-        CustomerDAO customerDAO = new CustomerDAO(connection);
-        PackageDAO packageDAO = new PackageDAO(connection);
-        OrderDAO orderDAO = new OrderDAO(connection);
-        VehicleDAO vehicleDAO = new VehicleDAO(connection);
-        LoginService loginService = new LoginService(connection);
     }
 }
