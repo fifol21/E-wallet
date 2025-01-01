@@ -130,5 +130,6 @@ public class Vehicles {
 
     public void oncapacityfield(ActionEvent actionEvent) {
     }
+
 }
 

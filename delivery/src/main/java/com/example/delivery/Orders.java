@@ -32,6 +32,10 @@ public class Orders {
     private TextField weightfield;
     @FXML
     private TextField iffragilefield;
+    @FXML
+    private TextField searchbyphonenumber;
+    @FXML
+    private Button displayinfoButton;
 
 
 
@@ -45,22 +49,12 @@ public class Orders {
         }
     }
 
-    public void onnextButton(ActionEvent actionEvent) {
-    }
-
-
-
-
 
     public void ondestinationfield(ActionEvent actionEvent) {
     }
 
     public void onstatusfield(ActionEvent actionEvent) {
     }
-
-
-
-
 
     public void onaddorderButton(ActionEvent actionEvent) throws IOException {
         try {
@@ -110,13 +104,13 @@ public class Orders {
             e.printStackTrace();
         }
     }
-    // poprawic te wyjatki, zeby byly zgodne z name phone itp
-    public void checkInput(String orderID, String customerID, String destination, String status, String vehicleID, String cost, String packageID) {
-        if (orderID == null|| orderID.isEmpty() || !orderID.matches("^[0-9]+$")) {
-            throw new IllegalArgumentException("Error: Order ID is incorrect (it has to be numeric) [123]");
+
+    public void checkInput(String phonenumber, String name, String address, String destination, String status, String weight, String iffragile) {
+        if (phonenumber == null|| phonenumber.isEmpty() || !phonenumber.matches("^[0-9]+$")) {
+            throw new IllegalArgumentException("Error: phone number is incorrect (it has to be numeric) [123]");
         }
-        if (customerID==null || customerID.isEmpty()|| !customerID.matches("^[0-9]+$")) {
-            throw new IllegalArgumentException("Error: Customer ID is incorrect (it has to be numeric)[123]");
+        if (name==null || name.isEmpty()|| !name.matches("^[a-zA-Z]+$")) {
+            throw new IllegalArgumentException("Error: name is incorrect (it has to be numeric)[123]");
         }
         if (destination==null || destination.isEmpty() || destination.matches("^[0-9]+$")) {
             throw new IllegalArgumentException("Error: Destination is incorrect (it has to be alphanumeric)[abc]");
@@ -124,11 +118,14 @@ public class Orders {
         if (status==null || status.isEmpty() || status.matches("^[0-9]+$")) {
             throw new IllegalArgumentException("Error: Status  is incorrect (it has to be alphanumeric) [abc]");
         }
-        if (vehicleID==null || vehicleID.isEmpty()|| !vehicleID.matches("^[0-9]+$")) {
-            throw new IllegalArgumentException("Error: Vehicle ID is incorrect (it has to be numeric) [123]");
+        if (address==null || address.isEmpty()|| !address.matches("^[a-zA-Z]+$")) {
+            throw new IllegalArgumentException("Error: address is incorrect (it has to be numeric) [123]");
         }
-        if (cost==null || cost.isEmpty() || !cost.matches("^[0-9]+\\.[0-9]+$")){
-            throw new IllegalArgumentException("Error: Cost is incorrect (it has to be decimal) [123.123]");
+        if (weight==null || weight.isEmpty() || !weight.matches("^[0-9]+$")){
+            throw new IllegalArgumentException("Error: weight is incorrect (it has to be decimal) [123.123]");
+        }
+        if (iffragile==null || iffragile.isEmpty() || !iffragile.equalsIgnoreCase("true") && !iffragile.equalsIgnoreCase("false")) {
+            throw new IllegalArgumentException("Error: Iffragile is incorrect (it has to be true or false)");
         }
     }
     public void ErrorAlert(String message, String title) {
@@ -156,6 +153,36 @@ public class Orders {
     }
 
     public void iffragilefield(ActionEvent actionEvent) {
+    }
+
+    public void ondisplayinfoButton(ActionEvent actionEvent) throws Exception{
+
+        // jesli sie wpisze numer telefonu poprawnie, musi wyszukac informacje o zamowieniu i wyswietlic je w okienku"searchorder"
+        // trzeba tutaj dopisac metode czy cos zeby po poprawnym wpisaniu nr wyszukalo w bazie i wyplulo poprawne informacje.
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("searchOrder.fxml"));
+            Stage search_order = new Stage();
+            search_order.setTitle("Information about order");
+            search_order.setResizable(false);
+            Scene scene = new Scene(fxmlLoader.load(), 600, 400);
+
+            String serch_phonenumber = searchbyphonenumber.getText();
+            if (serch_phonenumber == null || serch_phonenumber.isEmpty() || !serch_phonenumber.matches("^[0-9]+$")) {
+                ErrorAlert("Phone number should be numeric", "Error");
+            } else {
+                UpdateStatus UpdateStatusController = fxmlLoader.getController();
+                // tutaj musi byc zeby pobral odpowednie informacje z bazy danych i podpial je pod stringi (atrybuty)
+                //ktore potem sie przekaze do UpdateStatus class
+                search_order.setScene(scene);
+                search_order.show();
+            }
+        }catch (Exception e) {
+            e.printStackTrace();
+            System.out.println(e.getMessage());
+        }
+    }
+
+    public void onsearchbyphonenumber(ActionEvent actionEvent) {
     }
 }
 

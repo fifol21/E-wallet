@@ -57,7 +57,6 @@ public class Customers {
             add_costumer_stage.setResizable(false);
             Scene scene = new Scene(fxmlLoader.load(), 600, 400);
 
-            // czesc ktora pozwala pobierac juz zainicjowane w zmienne wartosci z pol BEZ WYJATKOW DO POPRAWY
             AddCustumer AddCostumerController = fxmlLoader.getController();
 
             String customerID = customeridfield.getText().toLowerCase();
@@ -68,7 +67,6 @@ public class Customers {
             // tworzenie obiektu z danymi wpisanymi w gui
 
             checkInput(name, address, contact); // input check
-//            System.out.println(newCustomer.DispayInfo());
 
             AddCostumerController.setCustomer(customerID, name, address, contact);
 
