@@ -46,8 +46,8 @@ public class HelloController {
                 second_stage.show();
                 Stage stage = (Stage) usernameTEXTFIELD.getScene().getWindow();
                 stage.close();
-           }else{
-                ErrorLogin_Alert("You do not have access to Company Systems!","Wrong Credentials");
+            }else{
+               ErrorLogin_Alert("You do not have access to Company Systems!","Wrong Credentials");
             }
         } catch (IOException e) {
             e.printStackTrace();
