@@ -84,6 +84,7 @@ public class HelloApplication extends Application {
         orderID = orderDAO.getLastOrder().getOrderID()+1;
 
         Order nowe = new Order(orderID,customerID,destination,status,vehicleID,cost,packageID);
+
         orderDAO.createOrder(nowe);
     }
 

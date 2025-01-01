@@ -17,19 +17,26 @@ public class Orders {
     @FXML
     private Button addorderButton;
     @FXML
-    private TextField orderfield;
+    private TextField phonenumberfield;
     @FXML
-    private TextField customeridfield;
+    private TextField namefield;
+    @FXML
+    private TextField addressfield;
     @FXML
     private TextField destinationfield;
     @FXML
     private TextField statusfield;
     @FXML
-    private TextField vehicleidfield;
+    private TextField sizefield;
     @FXML
-    private TextField costfield;
+    private TextField weightfield;
     @FXML
-    private TextField packageidfield;
+    private TextField iffragilefield;
+    @FXML
+    private TextField searchbyphonenumber;
+    @FXML
+    private Button displayinfoButton;
+
 
 
     public void onbackButton(ActionEvent actionEvent) throws IOException {
@@ -42,14 +49,6 @@ public class Orders {
         }
     }
 
-    public void onnextButton(ActionEvent actionEvent) {
-    }
-
-    public void onorderidfield(ActionEvent actionEvent) {
-    }
-
-    public void oncostumeridfield(ActionEvent actionEvent) {
-    }
 
     public void ondestinationfield(ActionEvent actionEvent) {
     }
@@ -57,35 +56,37 @@ public class Orders {
     public void onstatusfield(ActionEvent actionEvent) {
     }
 
-    public void onvehicleidfield(ActionEvent actionEvent) {
-    }
-
-    public void oncostfield(ActionEvent actionEvent) {
-    }
-
     public void onaddorderButton(ActionEvent actionEvent) throws IOException {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("addorder.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("addorder(ok).fxml"));
             Stage add_order = new Stage();
             add_order.setTitle("Add Order");
             add_order.setResizable(false);
             Scene scene = new Scene(fxmlLoader.load(), 600 ,400);
 
-            String orderID = orderfield.getText();
-            String customerID = customeridfield.getText().toLowerCase();
-            String destination = destinationfield.getText().toLowerCase();
-            String status = statusfield.getText().toLowerCase();
-            String vehicleID = vehicleidfield.getText().toLowerCase();
-            String cost = costfield.getText().toLowerCase();
-            String packageID = packageidfield.getText().toLowerCase();
+            String phonenumber = phonenumberfield.getText();
+            String name = namefield.getText();
+            String address = addressfield.getText();
+            String destination = destinationfield.getText();
+            String status = statusfield.getText();
+            String weight = weightfield.getText();
+            String iffragile = iffragilefield.getText();
+            String size = sizefield.getText();
+
+
+
+
 
             // check input data
-            checkInput(orderID,customerID,destination,status,vehicleID,cost,packageID);
+            checkInput(phonenumber, name, address, destination, status, weight, iffragile);
 
 
             AddOrder AddOrderController = fxmlLoader.getController();
 
-            AddOrderController.setOrder(orderID, customerID, destination, status, vehicleID, cost, packageID);
+
+
+
+            AddOrderController.setOrder(phonenumber,name,address,size,destination,status,weight, iffragile);
             add_order.setScene(scene);
             add_order.show();
 
@@ -103,12 +104,13 @@ public class Orders {
             e.printStackTrace();
         }
     }
-    public void checkInput(String orderID, String customerID, String destination, String status, String vehicleID, String cost, String packageID) {
-        if (orderID == null|| orderID.isEmpty() || !orderID.matches("^[0-9]+$")) {
-            throw new IllegalArgumentException("Error: Order ID is incorrect (it has to be numeric) [123]");
+
+    public void checkInput(String phonenumber, String name, String address, String destination, String status, String weight, String iffragile) {
+        if (phonenumber == null|| phonenumber.isEmpty() || !phonenumber.matches("^[0-9]+$")) {
+            throw new IllegalArgumentException("Error: phone number is incorrect (it has to be numeric) [123]");
         }
-        if (customerID==null || customerID.isEmpty()|| !customerID.matches("^[0-9]+$")) {
-            throw new IllegalArgumentException("Error :Customer ID is incorrect (it has to be numeric)[123]");
+        if (name==null || name.isEmpty()|| !name.matches("^[a-zA-Z]+$")) {
+            throw new IllegalArgumentException("Error: name is incorrect (it has to be numeric)[123]");
         }
         if (destination==null || destination.isEmpty() || destination.matches("^[0-9]+$")) {
             throw new IllegalArgumentException("Error: Destination is incorrect (it has to be alphanumeric)[abc]");
@@ -116,11 +118,14 @@ public class Orders {
         if (status==null || status.isEmpty() || status.matches("^[0-9]+$")) {
             throw new IllegalArgumentException("Error: Status  is incorrect (it has to be alphanumeric) [abc]");
         }
-        if (vehicleID==null || vehicleID.isEmpty()|| !vehicleID.matches("^[0-9]+$")) {
-            throw new IllegalArgumentException("Error: Vehicle ID is incorrect (it has to be numeric) [123]");
+        if (address==null || address.isEmpty()|| !address.matches("^[a-zA-Z]+$")) {
+            throw new IllegalArgumentException("Error: address is incorrect (it has to be numeric) [123]");
         }
-        if (cost==null || cost.isEmpty() || !cost.matches("^[0-9]+\\.[0-9]+$")){
-            throw new IllegalArgumentException("Error: Cost is incorrect (it has to be decimal) [123.123]");
+        if (weight==null || weight.isEmpty() || !weight.matches("^[0-9]+$")){
+            throw new IllegalArgumentException("Error: weight is incorrect (it has to be decimal) [123.123]");
+        }
+        if (iffragile==null || iffragile.isEmpty() || !iffragile.equalsIgnoreCase("true") && !iffragile.equalsIgnoreCase("false")) {
+            throw new IllegalArgumentException("Error: Iffragile is incorrect (it has to be true or false)");
         }
     }
     public void ErrorAlert(String message, String title) {
@@ -131,7 +136,53 @@ public class Orders {
         alert.showAndWait();
     }
 
-        public void onpackageidfield (ActionEvent actionEvent){
+
+    public void onphonenumberfield(ActionEvent actionEvent) {
+    }
+
+    public void onnamefield(ActionEvent actionEvent) {
+    }
+
+    public void onaddressfield(ActionEvent actionEvent) {
+    }
+
+    public void onsizefield(ActionEvent actionEvent) {
+    }
+
+    public void onweightfield(ActionEvent actionEvent) {
+    }
+
+    public void iffragilefield(ActionEvent actionEvent) {
+    }
+
+    public void ondisplayinfoButton(ActionEvent actionEvent) throws Exception{
+
+        // jesli sie wpisze numer telefonu poprawnie, musi wyszukac informacje o zamowieniu i wyswietlic je w okienku"searchorder"
+        // trzeba tutaj dopisac metode czy cos zeby po poprawnym wpisaniu nr wyszukalo w bazie i wyplulo poprawne informacje.
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("searchOrder.fxml"));
+            Stage search_order = new Stage();
+            search_order.setTitle("Information about order");
+            search_order.setResizable(false);
+            Scene scene = new Scene(fxmlLoader.load(), 600, 400);
+
+            String serch_phonenumber = searchbyphonenumber.getText();
+            if (serch_phonenumber == null || serch_phonenumber.isEmpty() || !serch_phonenumber.matches("^[0-9]+$")) {
+                ErrorAlert("Phone number should be numeric", "Error");
+            } else {
+                UpdateStatus UpdateStatusController = fxmlLoader.getController();
+                // tutaj musi byc zeby pobral odpowednie informacje z bazy danych i podpial je pod stringi (atrybuty)
+                //ktore potem sie przekaze do UpdateStatus class
+                search_order.setScene(scene);
+                search_order.show();
+            }
+        }catch (Exception e) {
+            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
     }
+
+    public void onsearchbyphonenumber(ActionEvent actionEvent) {
+    }
+}
 

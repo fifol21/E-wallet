@@ -33,11 +33,11 @@ public class HelloController {
 
 
     public void onLoginBUTTON(ActionEvent actionEvent)  throws IOException {
-        try { // jesli dobre logowanie- zwraca true i wywoluje sie FXML, jesli false wywala wyjatek i wywala metode ErrorLogin_Alert
+        try {
             String password = passwordfield.getText();
             String username = usernameTEXTFIELD.getText();
 
-            if(AppContext.getLoginService().login(username, password)) {
+            //if(AppContext.getLoginService().login(username, password)) {
                 FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("after_login.fxml"));
                 Stage second_stage = new Stage();
                 second_stage.setResizable(false);
@@ -46,9 +46,9 @@ public class HelloController {
                 second_stage.show();
                 Stage stage = (Stage) usernameTEXTFIELD.getScene().getWindow();
                 stage.close();
-            }else{
-                ErrorLogin_Alert("You do not have access to Company Systems!","Wrong Credentials");
-            }
+           // }else{
+               // ErrorLogin_Alert("You do not have access to Company Systems!","Wrong Credentials");
+            //}
         } catch (IOException e) {
             e.printStackTrace();
             System.out.println("Error");

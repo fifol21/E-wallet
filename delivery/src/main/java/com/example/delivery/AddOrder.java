@@ -8,31 +8,38 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class AddOrder {
-    @FXML
-    private TextField orderfield;
-    @FXML
-    private TextField customeridfield;
+
     @FXML
     private TextField destinationfield;
     @FXML
     private TextField statusfield;
     @FXML
-    private TextField vehicleidfield;
+    private TextField phonenumberfield;
     @FXML
-    private TextField costfield;
+    private TextField namefield;
     @FXML
-    private TextField packageidfield;
+    private TextField addressfield;
+    @FXML
+    private TextField sizefield;
+    @FXML
+    private TextField weightfield;
+    @FXML
+    private TextField iffragilefield;
+
     @FXML
     private Button backButton;
 
-    public void setOrder (String orderID, String customerID, String destination, String status, String vehicleID, String cost, String packageID){
-        orderfield.setText(orderID);
-        customeridfield.setText(customerID);
-        destinationfield.setText(destination);
+    public void setOrder(String phonenumber, String name, String address, String size, String destination,String status,String weight, String iffragile) {
+        phonenumberfield.setText(phonenumber);
+        namefield.setText(name);
+        addressfield.setText(address);
+        sizefield.setText(size);
+        weightfield.setText(weight);
+        iffragilefield.setText(iffragile);
         statusfield.setText(status);
-        vehicleidfield.setText(vehicleID);
-        costfield.setText(cost);
-        packageidfield.setText(packageID);
+        destinationfield.setText(destination);
+
+
 
     }
 
@@ -47,11 +54,7 @@ public class AddOrder {
         }
     }
 
-    public void onorderidfield(ActionEvent actionEvent) {
-    }
 
-    public void oncostumeridfield(ActionEvent actionEvent) {
-    }
 
     public void ondestinationfield(ActionEvent actionEvent) {
     }
@@ -59,25 +62,39 @@ public class AddOrder {
     public void onstatusfield(ActionEvent actionEvent) {
     }
 
-    public void onvehicleidfield(ActionEvent actionEvent) {
-    }
-
-    public void oncostfield(ActionEvent actionEvent) {
-    }
-
-    public void onpackageidfield(ActionEvent actionEvent) {
-    }
 
     public void onnextButton(ActionEvent actionEvent) {
     }
 
     public void onconfirmButton(ActionEvent actionEvent) {
-        String OrderID = orderfield.getText();
-        String CustomerID = customeridfield.getText();
-        String Destination = destinationfield.getText();
-        String Status = statusfield.getText();
-        String VehicleID = vehicleidfield.getText();
-        String Cost = costfield.getText();
-        String PackageID = packageidfield.getText();
+        String phonenumber = phonenumberfield.getText();
+        String name = namefield.getText();
+        String address = addressfield.getText();
+        String destination = destinationfield.getText();
+        String status = statusfield.getText();
+        String weight = weightfield.getText();
+        String iffragile = iffragilefield.getText();
+        String size = sizefield.getText();
+
+        HelloApplication.createOrder(phonenumber,name,address,status,destination, size, Float.parseFloat(weight), Boolean.parseBoolean(iffragile),AppContext.getCustomerDAO(),AppContext.getPackageDAO(), AppContext.getOrderDAO(),AppContext.getVehicleDAO());;
+    }
+
+    public void onphonenumberfield(ActionEvent actionEvent) {
+    }
+
+    public void onnamefield(ActionEvent actionEvent) {
+    }
+
+    public void onaddressfield(ActionEvent actionEvent) {
+    }
+
+    public void onsizefield(ActionEvent actionEvent) {
+    }
+
+    public void onweightfield(ActionEvent actionEvent) {
+    }
+
+    public void iffragilefield(ActionEvent actionEvent) {
+
     }
 }
