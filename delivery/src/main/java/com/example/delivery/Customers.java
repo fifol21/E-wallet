@@ -23,7 +23,9 @@ public class Customers {
     @FXML
     private TextField contactfield;
     @FXML
-    private Button nextButton;
+    private Button DisplayInfo;
+    @FXML
+    private TextField searchbyphonenumberfield;
 
 
 
@@ -37,16 +39,6 @@ public class Customers {
             e.printStackTrace();
         }
 
-    }
-
-    public void oncustomerfield(ActionEvent actionEvent) throws IOException {
-    }
-
-
-
-
-
-    public void onnextButton(ActionEvent actionEvent) {
     }
 
     public void onaddcostumerButton(ActionEvent actionEvent) throws IOException {
@@ -72,9 +64,9 @@ public class Customers {
 
             add_costumer_stage.setScene(scene);
             add_costumer_stage.show();
-            Stage stage = (Stage) nextButton.getScene().getWindow();
+            Stage stage = (Stage) DisplayInfo.getScene().getWindow();
             stage.close();
-//            System.out.println(newCustomer);
+
         }catch (IllegalArgumentException e) {
             ErrorAlert( e.getMessage(), "Error");
             e.printStackTrace();
@@ -110,12 +102,35 @@ public class Customers {
         alert.showAndWait();
     }
 
-    public void onnamefield(ActionEvent actionEvent) {
-    }
+    public void onDisplayInfo(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("searchCustomer.fxml"));
+        Stage searchCustomer_stage = new Stage();
+        searchCustomer_stage.setTitle("Information about Customer");
+        searchCustomer_stage.setResizable(false);
+        Scene scene = new Scene(fxmlLoader.load(),600,400);
 
-    public void onaddressfield(ActionEvent actionEvent) {
-    }
+        String contact = searchbyphonenumberfield.getText();
+        String name;
+        String address;
+        String Customer_ID;
 
-    public void oncontactfield(ActionEvent actionEvent) {
+        if(contact == null || contact.isEmpty() || !contact.matches("^[0-9]+$")){
+            ErrorAlert("Customer ID has to be alphanumeric", "Error");
+        }else{
+            SearchCustomer SearchCustomerController = fxmlLoader.getController();
+            Customer read_from_db = AppContext.getCustomerDAO().readCustomer(Integer.parseInt(contact));
+            if(read_from_db == null){
+                ErrorAlert("Customer not found", "Error");
+                Stage stage = (Stage) customeridfield.getScene().getWindow();
+                stage.close();
+            }else{
+                name = String.valueOf(read_from_db.getName());
+                address = String.valueOf(read_from_db.getAddress());
+                Customer_ID = String.valueOf(read_from_db.getCustomerID());
+                SearchCustomerController.setInfo(contact,name,address,Customer_ID);
+            }
+
+        }
+
     }
 }

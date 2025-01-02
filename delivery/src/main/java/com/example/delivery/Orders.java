@@ -174,7 +174,7 @@ public class Orders {
             String cost;
             String packageID;
             if (search_orderID == null || search_orderID.isEmpty() || !search_orderID.matches("^[0-9]+$")) {
-                ErrorAlert("Phone number should be numeric", "Error");
+                ErrorAlert("Order ID should be numeric", "Error");
             } else {
                 UpdateStatus UpdateStatusController = fxmlLoader.getController();
                 Order read_from_db = AppContext.getOrderDAO().readOrder(Integer.parseInt(search_orderID), AppContext.getPackageDAO());
