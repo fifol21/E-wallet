@@ -67,9 +67,9 @@ public class AddVehicle {
         //String type = typefield.getText().toLowerCase();
         String capacity = capacityfield.getText().toLowerCase();
 
-        Vehicle newVehicle = new Vehicle(Integer.parseInt(vehicleID),Integer.parseInt(capacity));
-        AppContext.getVehicleDAO().createVehicle(newVehicle); // czy to jest git napewno ? i czy nie mozna zrobic metode addVehicle static i zmienic tutaj
-        System.out.println(newVehicle.DisplayInfo());
+        HelloApplication.addVehicle(Integer.parseInt(vehicleID),Integer.parseInt(capacity),AppContext.getVehicleDAO());
+      //  AppContext.getVehicleDAO().createVehicle(newVehicle); // czy to jest git napewno ? i czy nie mozna zrobic metode addVehicle static i zmienic tutaj
+      //  System.out.println(newVehicle.DisplayInfo());
         Stage stage = (Stage) capacityfield.getScene().getWindow();
         stage.close();
 

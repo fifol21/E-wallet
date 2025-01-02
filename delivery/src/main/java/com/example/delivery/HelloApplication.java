@@ -39,7 +39,7 @@ public class HelloApplication extends Application {
         customerDAO.saveCustomer(newCustomer);
     }
 
-    public void addVehicle(int VehicleID,int capacity, VehicleDAO vehicleDAO) {
+    public static void addVehicle(int VehicleID,int capacity, VehicleDAO vehicleDAO) {
         if(capacity <= 500){
             miniBus minibus = new miniBus(VehicleID);
             vehicleDAO.createVehicle(minibus);

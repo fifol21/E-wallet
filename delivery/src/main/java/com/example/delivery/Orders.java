@@ -167,12 +167,33 @@ public class Orders {
             Scene scene = new Scene(fxmlLoader.load(), 600, 400);
 
             String search_orderID = searchbyorderid.getText();
+            String customer_ID;
+            String destination;
+            String status;
+            String vehicleID;
+            String cost;
+            String packageID;
             if (search_orderID == null || search_orderID.isEmpty() || !search_orderID.matches("^[0-9]+$")) {
                 ErrorAlert("Phone number should be numeric", "Error");
             } else {
                 UpdateStatus UpdateStatusController = fxmlLoader.getController();
+                Order read_from_db = AppContext.getOrderDAO().readOrder(Integer.parseInt(search_orderID), AppContext.getPackageDAO());
+                if(read_from_db == null){
+                    ErrorAlert("There is not such a order", "Error");
+                    Stage stage = (Stage) searchbyorderid.getScene().getWindow();
+                    stage.close();
+                }else{
+                    customer_ID = String.valueOf(read_from_db.getCustomerID());
+                    destination = read_from_db.getDestination();
+                    status = read_from_db.getStatus();
+                    vehicleID = String.valueOf(read_from_db.getVehicleID());
+                    cost = String.valueOf(read_from_db.getCost());
+                    packageID = String.valueOf(read_from_db.getPackageID());
+                    UpdateStatusController.setInfo(search_orderID, customer_ID,destination,status,vehicleID,cost,packageID);
+                }
                 // tutaj musi byc zeby pobral odpowednie informacje z bazy danych i podpial je pod stringi (atrybuty)
                 //ktore potem sie przekaze do UpdateStatus class
+
                 search_order.setScene(scene);
                 search_order.show();
             }

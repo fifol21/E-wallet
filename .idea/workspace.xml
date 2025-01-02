@@ -6,9 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="f3db411b-dc19-43a8-8387-44ea7e9acb9b" name="Changes" comment="added singleton pattern">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/AddVehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/AddVehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Orders.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Orders.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery/src/main/resources/com/example/delivery/Orders.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/resources/com/example/delivery/Orders.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/UpdateStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/UpdateStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/src/main/resources/com/example/delivery/searchOrder.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/resources/com/example/delivery/searchOrder.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/HelloApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/HelloApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/HelloController.class" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/HelloController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/Orders.class" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/Orders.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/Orders.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/Orders.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,29 +62,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.JDBC.executor&quot;: &quot;Run&quot;,
-    &quot;Application.JDBC.java.executor&quot;: &quot;Debug&quot;,
-    &quot;Application.Tests.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/bemma/University/E-wallet/libraries/mysql-connector-j-9.1.0.jar&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.HelloApplication.executor": "Run",
+    "Application.JDBC.executor": "Run",
+    "Application.JDBC.java.executor": "Debug",
+    "Application.Tests.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/bemma/University/E-wallet/libraries/mysql-connector-j-9.1.0.jar",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\bemma\University\E-wallet\libraries" />
@@ -141,7 +147,6 @@
       <workItem from="1735248342121" duration="18640000" />
       <workItem from="1735495553279" duration="913000" />
       <workItem from="1735504068322" duration="1887000" />
-      <workItem from="1735819280019" duration="1568000" />
     </task>
     <task id="LOCAL-00001" summary="added queryExecutor and DatabaseConnector classes">
       <option name="closed" value="true" />

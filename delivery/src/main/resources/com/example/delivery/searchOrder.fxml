@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.delivery.UpdateStatus">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.delivery.UpdateStatus">
     <top>
         <AnchorPane prefHeight="95.0" prefWidth="600.0" BorderPane.alignment="CENTER">
             <children>
@@ -19,31 +22,29 @@
     <left>
         <AnchorPane prefHeight="305.0" prefWidth="146.0" BorderPane.alignment="CENTER">
             <children>
-                <Label layoutX="76.0" layoutY="6.0" text="Phone Number" textFill="#e5ff00" />
-                <Label layoutX="123.0" layoutY="30.0" text="Name" textFill="#e5ff00" />
-                <Label layoutX="108.0" layoutY="70.0" text="Destination" textFill="#e5ff00" />
-                <Label layoutX="129.0" layoutY="99.0" text="Status" textFill="#e5ff00" />
+                <Label layoutX="154.0" layoutY="5.0" text="Order ID" textFill="#e5ff00" />
+                <Label layoutX="134.0" layoutY="44.0" text="Customer ID" textFill="#e5ff00" />
+                <Label layoutX="143.0" layoutY="76.0" text="Destination" textFill="#e5ff00" />
+                <Label layoutX="173.0" layoutY="114.0" text="Status" textFill="#e5ff00" />
                 <Label layoutX="59.0" layoutY="166.0" textFill="#e5ff00" />
-                <Label layoutX="128.0" layoutY="129.0" text="Address" textFill="#e5ff00" />
+                <Label layoutX="149.0" layoutY="157.0" text="Vehicle ID" textFill="#e5ff00" />
                 <Button fx:id="backButton" layoutX="39.0" layoutY="279.0" mnemonicParsing="false" onAction="#onbackButton" style="-fx-background-color: e5ff00;" text="Back" />
-                <Label layoutX="127.0" layoutY="166.0" text="Size" textFill="#eaff00" />
-                <Label layoutX="127.0" layoutY="199.0" text="Weight" textFill="#d2fc4b" />
-                <Label layoutX="116.0" layoutY="234.0" text="If Fragile" textFill="#deff0b" />
+                <Label layoutX="177.0" layoutY="195.0" text="Cost" textFill="#eaff00" />
+                <Label layoutX="146.0" layoutY="237.0" text="Package ID" textFill="#d2fc4b" />
             </children>
         </AnchorPane>
     </left>
     <center>
         <AnchorPane prefHeight="270.0" prefWidth="347.0" BorderPane.alignment="CENTER">
             <children>
-                <TextField fx:id="phonenumberfield" layoutX="45.0" layoutY="2.0" onAction="#onphonenumberfield" promptText="Phone Number" />
-                <TextField fx:id="namefield" layoutX="45.0" layoutY="27.0" onAction="#onnamefield" promptText="Name" />
-                <TextField fx:id="destinationfield" layoutX="45.0" layoutY="60.0" onAction="#ondestinationfield" promptText="Destination" />
-                <TextField fx:id="statusfield" layoutX="45.0" layoutY="92.0" onAction="#onstatusfield" promptText="Status" />
-                <TextField fx:id="addressfield" layoutX="45.0" layoutY="128.0" onAction="#onaddressfield" promptText="Address" />
-                <TextField fx:id="sizefield" layoutX="45.0" layoutY="161.0" onAction="#onsizefield" promptText="SIze" />
+                <TextField fx:id="orderidfield" layoutX="45.0" layoutY="2.0" promptText="Order ID" />
+                <TextField fx:id="customeridfield" layoutX="45.0" layoutY="38.0" promptText="Customer ID" />
+                <TextField fx:id="destinationfield" layoutX="45.0" layoutY="74.0" onAction="#ondestinationfield" promptText="Destination" />
+                <TextField fx:id="statusfield" layoutX="45.0" layoutY="112.0" onAction="#onstatusfield" promptText="Status" />
+                <TextField fx:id="vehicleidfield" layoutX="45.0" layoutY="152.0" promptText="Vehicle ID" />
+                <TextField fx:id="costfield" layoutX="45.0" layoutY="192.0" promptText="Cost" />
                 <Button fx:id="updatestatusButton" layoutX="77.0" layoutY="279.0" mnemonicParsing="false" onAction="#onupdatestatusButton" style="-fx-background-color: e5ff00;" text="Update Status" />
-                <TextField fx:id="weightfield" layoutX="45.0" layoutY="199.0" onAction="#onweightfield" promptText="Weight" />
-                <TextField fx:id="iffragilefield" layoutX="45.0" layoutY="234.0" onAction="#iffragilefield" promptText="If Fragile?" />
+                <TextField fx:id="packageidfield" layoutX="45.0" layoutY="233.0" onAction="#onweightfield" promptText="Package ID" />
             </children>
         </AnchorPane>
     </center>
