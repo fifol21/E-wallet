@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.delivery.SearchCustomer">
+    <top>
+        <AnchorPane prefHeight="95.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label layoutX="141.0" layoutY="25.0" prefHeight="67.0" prefWidth="332.0" text="MileDeliverEX" textFill="#c0c907">
+                    <font>
+                        <Font name="System Bold" size="55.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+    </top>
+    <left>
+        <AnchorPane prefHeight="305.0" prefWidth="146.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label layoutX="88.0" layoutY="30.0" text="customer ID" textFill="#e5ff00" />
+                <Label layoutX="98.0" layoutY="61.0" text="name" textFill="#e5ff00" />
+                <Label layoutX="90.0" layoutY="98.0" text="Address" textFill="#e5ff00" />
+                <Label layoutX="84.0" layoutY="136.0" text="Contact Number" textFill="#e5ff00" />
+                <Button fx:id="backButton" layoutX="76.0" layoutY="265.0" mnemonicParsing="false" onAction="#onbackButton" style="-fx-background-color: e5ff00;" text="Back" />
+            </children>
+        </AnchorPane>
+    </left>
+    <center>
+        <AnchorPane prefHeight="270.0" prefWidth="347.0" BorderPane.alignment="CENTER">
+            <children>
+                <TextField fx:id="customeridfield" layoutX="47.0" layoutY="21.0" promptText="CustomerID" />
+                <TextField fx:id="namefield" layoutX="47.0" layoutY="56.0" promptText="name" />
+                <TextField fx:id="addressfield" layoutX="47.0" layoutY="91.0" promptText="Address" />
+                <TextField fx:id="contactfield" layoutX="47.0" layoutY="128.0" promptText="Number" />
+            <Button fx:id="UpdateCustomerButton" layoutX="70.0" layoutY="266.0" mnemonicParsing="false" onAction="#onUpdateCustomerButton" style="-fx-background-color: yellow;" text="Update Customer" />
+            </children>
+        </AnchorPane>
+    </center>
+    <right>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+    </right>
+</BorderPane>

@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f3db411b-dc19-43a8-8387-44ea7e9acb9b" name="Changes" comment="update">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Customers.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Customers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Orders.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Orders.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery/src/main/resources/com/example/delivery/Orders.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/resources/com/example/delivery/Orders.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery/src/main/resources/com/example/delivery/customers.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/resources/com/example/delivery/customers.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="f3db411b-dc19-43a8-8387-44ea7e9acb9b" name="Changes" comment="update" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,7 +21,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="piwo" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -65,7 +59,7 @@
     "Application.Tests.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "piwo",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/bemma/University/E-wallet/libraries/mysql-connector-j-9.1.0.jar",
@@ -92,7 +86,7 @@
       <recent name="com.example.delivery" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.JDBC.java">
     <configuration name="JDBC" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.delivery.JDBC" />
       <module name="delivery" />
