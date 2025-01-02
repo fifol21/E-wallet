@@ -15,13 +15,6 @@ import java.io.IOException;
 public class Vehicles {
     @FXML
     private TextField vehicleidfield;
-    //@FXML
-   // private TextField typefield;
-   // @FXML
-   // private TextField availablefield;
-   // @FXML
-   // private TextField loadfield;
-    @FXML
     private TextField capacityfield;
     @FXML
     private Button addvehicleButton;
@@ -46,10 +39,7 @@ public class Vehicles {
             //System.out.println("przed");
 
             String vehicleID = vehicleidfield.getText().toLowerCase();
-            //String type = typefield.getText().toLowerCase();
-           // String available = availablefield.getText().toLowerCase();
             String capacity = capacityfield.getText().toLowerCase();
-           // String load = loadfield.getText().toLowerCase();
 
             checkInput(vehicleID, capacity);
 
@@ -86,18 +76,9 @@ public class Vehicles {
         if (vehicleID == null || vehicleID.isEmpty() || !vehicleID.matches("^[0-9]+$")) {
             throw new IllegalArgumentException("Error: Vehicle ID is incorrect (it has to be numeric) [123]");
         }
-       // if (type == null || type.isEmpty() || !type.matches("^[a-zA-Z]+$")) {
-          //  throw new IllegalArgumentException("Error: Type is incorrect (it has to be alphanumeric) [abc]");
-        //}
-        //if (!available.equalsIgnoreCase("true") && !available.equalsIgnoreCase("false")) {
-       //     throw new IllegalArgumentException("Error: Available must be 'true' or 'false'");
-       // }
         if (capacity == null || capacity.isEmpty() || !capacity.matches("^[0-9]+$")) {
             throw new IllegalArgumentException("Error: Capacity is incorrect (it has to be numeric) [123]");
         }
-        //if (load == null || load.isEmpty() || !load.matches("^[0-9]+$")) {
-        //    throw new IllegalArgumentException("Error: Load is incorrect (it has to be numeric) [123]");
-       // }
     }
 
     public void ErrorAlert(String message, String title) {
@@ -114,12 +95,6 @@ public class Vehicles {
 
     public void ontypefield(ActionEvent actionEvent) {
     }
-
-   // public void onavailablefield(ActionEvent actionEvent) {
-    //}
-
-    //public void onloadfield(ActionEvent actionEvent) {
-    //}
 
     public void oncapacityfield(ActionEvent actionEvent) {
     }

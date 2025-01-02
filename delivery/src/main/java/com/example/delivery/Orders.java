@@ -191,8 +191,6 @@ public class Orders {
                     packageID = String.valueOf(read_from_db.getPackageID());
                     UpdateStatusController.setInfo(search_orderID, customer_ID,destination,status,vehicleID,cost,packageID);
                 }
-                // tutaj musi byc zeby pobral odpowednie informacje z bazy danych i podpial je pod stringi (atrybuty)
-                //ktore potem sie przekaze do UpdateStatus class
 
                 search_order.setScene(scene);
                 search_order.show();

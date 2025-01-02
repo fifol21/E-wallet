@@ -90,9 +90,7 @@ public class Customers {
         }
     }
     public void checkInput(String name, String address, String contact) {
-//            if (customerID == null || customerID.isEmpty()|| !customerID.matches("^[0-9]+$")){
-//                throw new IllegalArgumentException("Error: Customer ID is incorrect (it has to be numeric) [123]");
-//            }
+
             if (name == null || name.isEmpty()||!name.matches("^[a-zA-Z]+$")){
                 throw new IllegalArgumentException("Error: name is incorrect (it has to be alphanumeric) [abc]");
 

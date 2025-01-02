@@ -17,10 +17,6 @@ public class AddVehicle {
     private TextField vehicleidfield;
     @FXML
     private TextField typefield;
-    //@FXML
-    //private TextField availablefield;
-    //@FXML
-    //private TextField loadfield;
     @FXML
     private TextField capacityfield;
     @FXML
@@ -30,10 +26,7 @@ public class AddVehicle {
     public void setVehicle(String vehicleID, String capacity){
         try {
             vehicleidfield.setText(vehicleID);
-           // typefield.setText(type);
-           // availablefield.setText(available);
             capacityfield.setText(capacity);
-           // loadfield.setText(load);
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -53,23 +46,17 @@ public class AddVehicle {
     public void ontypefield(ActionEvent actionEvent) {
     }
 
-   // public void onavailablefield(ActionEvent actionEvent) {
-    //}
 
-    //public void onloadfield(ActionEvent actionEvent) {
-   // }
 
     public void oncapacityfield(ActionEvent actionEvent) {
     }
 
     public void onconfirmButton(ActionEvent actionEvent) {
         String vehicleID = vehicleidfield.getText().toLowerCase();
-        //String type = typefield.getText().toLowerCase();
+
         String capacity = capacityfield.getText().toLowerCase();
 
         HelloApplication.addVehicle(Integer.parseInt(vehicleID),Integer.parseInt(capacity),AppContext.getVehicleDAO());
-      //  AppContext.getVehicleDAO().createVehicle(newVehicle); // czy to jest git napewno ? i czy nie mozna zrobic metode addVehicle static i zmienic tutaj
-      //  System.out.println(newVehicle.DisplayInfo());
         Stage stage = (Stage) capacityfield.getScene().getWindow();
         stage.close();
 

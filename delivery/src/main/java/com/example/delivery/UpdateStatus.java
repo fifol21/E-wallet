@@ -27,10 +27,6 @@ public class UpdateStatus {
     @FXML
     private Button backButton;
 
-
-    // Zadaniem tej klasy bedzie pokazanie informacji ktore zostana wyplute przed metode w klasie Order -> ondisplayinfoButton.
-    // kolejne zadanie to bedzie tyljo edytowalny pole STATUS, zebysmy moghli zmienic status i wcisniecie przycisku changestatus zapisze do bazy danych
-    // nowe dane
     public void setInfo(String order_id,String customer_id, String destination, String status, String vehicle_id, String cost, String package_id){
         orderidfield.setText(order_id);
         customeridfield.setText(customer_id);
@@ -47,30 +43,13 @@ public class UpdateStatus {
         }
 
 
-    public void onphonenumberfield(ActionEvent actionEvent) {
-    }
-
-    public void onnamefield(ActionEvent actionEvent) {
-    }
-
     public void ondestinationfield(ActionEvent actionEvent) {
     }
 
     public void onstatusfield(ActionEvent actionEvent) {
     }
 
-    public void onaddressfield(ActionEvent actionEvent) {
-    }
-
-    public void onsizefield(ActionEvent actionEvent) {
-    }
-
-
-
     public void onweightfield(ActionEvent actionEvent) {
-    }
-
-    public void iffragilefield(ActionEvent actionEvent) {
     }
 
     public void onupdatestatusButton(ActionEvent actionEvent) {
