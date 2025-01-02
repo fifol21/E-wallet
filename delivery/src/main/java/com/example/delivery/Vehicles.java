@@ -15,8 +15,8 @@ import java.io.IOException;
 public class Vehicles {
     @FXML
     private TextField vehicleidfield;
-    @FXML
-    private TextField typefield;
+    //@FXML
+   // private TextField typefield;
    // @FXML
    // private TextField availablefield;
    // @FXML
@@ -46,19 +46,19 @@ public class Vehicles {
             //System.out.println("przed");
 
             String vehicleID = vehicleidfield.getText().toLowerCase();
-            String type = typefield.getText().toLowerCase();
+            //String type = typefield.getText().toLowerCase();
            // String available = availablefield.getText().toLowerCase();
             String capacity = capacityfield.getText().toLowerCase();
            // String load = loadfield.getText().toLowerCase();
 
-            checkInput(vehicleID, type, capacity);
+            checkInput(vehicleID, capacity);
 
 
 
 
 
             // adding data from vehicle to add vehicle
-            AddVehicleController.setVehicle(vehicleID, type ,capacity);
+            AddVehicleController.setVehicle(vehicleID,capacity);
             add_vehicle_stage.setScene(scene);
             add_vehicle_stage.show();
 
@@ -82,13 +82,13 @@ public class Vehicles {
 
 
     }
-    public void checkInput(String vehicleID, String type, String capacity) {
+    public void checkInput(String vehicleID, String capacity) {
         if (vehicleID == null || vehicleID.isEmpty() || !vehicleID.matches("^[0-9]+$")) {
             throw new IllegalArgumentException("Error: Vehicle ID is incorrect (it has to be numeric) [123]");
         }
-        if (type == null || type.isEmpty() || !type.matches("^[a-zA-Z]+$")) {
-            throw new IllegalArgumentException("Error: Type is incorrect (it has to be alphanumeric) [abc]");
-        }
+       // if (type == null || type.isEmpty() || !type.matches("^[a-zA-Z]+$")) {
+          //  throw new IllegalArgumentException("Error: Type is incorrect (it has to be alphanumeric) [abc]");
+        //}
         //if (!available.equalsIgnoreCase("true") && !available.equalsIgnoreCase("false")) {
        //     throw new IllegalArgumentException("Error: Available must be 'true' or 'false'");
        // }

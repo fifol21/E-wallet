@@ -33,7 +33,7 @@ public class Orders {
     @FXML
     private TextField iffragilefield;
     @FXML
-    private TextField searchbyphonenumber;
+    private TextField searchbyorderid;
     @FXML
     private Button displayinfoButton;
 
@@ -166,8 +166,8 @@ public class Orders {
             search_order.setResizable(false);
             Scene scene = new Scene(fxmlLoader.load(), 600, 400);
 
-            String serch_phonenumber = searchbyphonenumber.getText();
-            if (serch_phonenumber == null || serch_phonenumber.isEmpty() || !serch_phonenumber.matches("^[0-9]+$")) {
+            String search_orderID = searchbyorderid.getText();
+            if (search_orderID == null || search_orderID.isEmpty() || !search_orderID.matches("^[0-9]+$")) {
                 ErrorAlert("Phone number should be numeric", "Error");
             } else {
                 UpdateStatus UpdateStatusController = fxmlLoader.getController();
@@ -182,7 +182,9 @@ public class Orders {
         }
     }
 
-    public void onsearchbyphonenumber(ActionEvent actionEvent) {
+
+
+    public void onsearchbyorderid(ActionEvent actionEvent) {
     }
 }
 
