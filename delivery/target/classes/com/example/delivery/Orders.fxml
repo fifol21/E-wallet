@@ -52,7 +52,7 @@
          <children>
             <Button fx:id="displayinfoButton" layoutX="59.0" layoutY="169.0" mnemonicParsing="false" onAction="#ondisplayinfoButton" style="-fx-background-color: e5ff00;" text="Display Info" />
             <Label layoutX="42.0" layoutY="6.0" text="Search by Order ID" textFill="#fbff00" />
-            <TextField fx:id="searchbyorderid" layoutX="20.0" layoutY="38.0" onAction="#onsearchbyorderid" promptText="Enter Phone Number" />
+            <TextField fx:id="searchbyorderid" layoutX="20.0" layoutY="38.0" onAction="#onsearchbyorderid" promptText="Enter Order ID" />
          </children>
       </AnchorPane>
    </right>
