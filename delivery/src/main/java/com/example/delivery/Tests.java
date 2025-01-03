@@ -22,6 +22,7 @@ public class Tests {
 //        List<Vehicle> vehicles = vehicleDAO.getAllVehicles();
 //        System.out.println(vehicles.get(0).getVehicleID());
 //        System.out.println(AppContext.getLoginService().login("worker123","strongPassword"));
-        System.out.println(AppContext.getCustomerDAO().getLastCustomer().getCustomerID());
+//        System.out.println(AppContext.getCustomerDAO().getLastCustomer().getCustomerID());
+        System.out.println(AppContext.getOrderDAO().getPendingOrders());
     }
 }

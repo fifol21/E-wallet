@@ -13,6 +13,10 @@ import java.io.IOException;
 
 public class Orders {
     @FXML
+    public Button pending_ordersButton;
+    @FXML
+    public Button allOrdersButton;
+    @FXML
     private Button backButton;
     @FXML
     private Button addorderButton;
@@ -204,6 +208,24 @@ public class Orders {
 
 
     public void onsearchbyorderid(ActionEvent actionEvent) {
+    }
+
+    public void onpending_OrdersButton(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("pending_orders.fxml"));
+            Stage search_order = new Stage();
+            search_order.setTitle("List of pending orders");
+            search_order.setResizable(false);
+            Scene scene = new Scene(fxmlLoader.load(), 600, 400);
+            search_order.setScene(scene);
+            search_order.show();
+        }catch(Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public void onallOrdersButton(ActionEvent actionEvent) {
     }
 }
 

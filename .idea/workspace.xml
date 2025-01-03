@@ -4,8 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f3db411b-dc19-43a8-8387-44ea7e9acb9b" name="Changes" comment="cleaning and added methods to Customers">
+    <list default="true" id="f3db411b-dc19-43a8-8387-44ea7e9acb9b" name="Changes" comment="added singleton pattern">
+      <change afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Pending_orders.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Orders.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Orders.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/SearchCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/SearchCustomer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Tests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/src/main/resources/com/example/delivery/Orders.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/resources/com/example/delivery/Orders.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/HelloController.class" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/HelloController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/Orders.class" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/Orders.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/Orders.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/Orders.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +32,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="piwo" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -88,7 +97,7 @@
       <recent name="com.example.delivery" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.JDBC.java">
+  <component name="RunManager">
     <configuration name="JDBC" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.delivery.JDBC" />
       <module name="delivery" />
@@ -107,7 +116,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.JDBC" />
         <item itemvalue="Application.JDBC" />
         <item itemvalue="Application.JDBC" />
         <item itemvalue="Application.JDBC" />
@@ -139,7 +147,6 @@
       <workItem from="1735248342121" duration="18640000" />
       <workItem from="1735495553279" duration="913000" />
       <workItem from="1735504068322" duration="1887000" />
-      <workItem from="1735847917733" duration="2464000" />
     </task>
     <task id="LOCAL-00001" summary="added queryExecutor and DatabaseConnector classes">
       <option name="closed" value="true" />
@@ -229,31 +236,7 @@
       <option name="project" value="LOCAL" />
       <updated>1735750306835</updated>
     </task>
-    <task id="LOCAL-00012" summary="cleaning">
-      <option name="closed" value="true" />
-      <created>1735848100792</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1735848100792</updated>
-    </task>
-    <task id="LOCAL-00013" summary="cleaning">
-      <option name="closed" value="true" />
-      <created>1735848148534</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1735848148534</updated>
-    </task>
-    <task id="LOCAL-00014" summary="cleaning and added methods to Customers">
-      <option name="closed" value="true" />
-      <created>1735850745237</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1735850745237</updated>
-    </task>
-    <option name="localTasksCounter" value="15" />
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,8 +251,6 @@
     <MESSAGE value="creating new objects,  exception handlings in few classes" />
     <MESSAGE value="added singleton pattern" />
     <MESSAGE value="Exception problem resolved ( Orders, Customers,Vehicles)" />
-    <MESSAGE value="cleaning" />
-    <MESSAGE value="cleaning and added methods to Customers" />
-    <option name="LAST_COMMIT_MESSAGE" value="cleaning and added methods to Customers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Exception problem resolved ( Orders, Customers,Vehicles)" />
   </component>
 </project>
