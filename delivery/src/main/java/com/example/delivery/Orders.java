@@ -226,6 +226,17 @@ public class Orders {
     }
 
     public void onallOrdersButton(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("all_orders.fxml"));
+            Stage search_order = new Stage();
+            search_order.setTitle("List of all orders");
+            search_order.setResizable(false);
+            Scene scene = new Scene(fxmlLoader.load(), 600, 400);
+            search_order.setScene(scene);
+            search_order.show();
+        }catch(Exception e) {
+            e.printStackTrace();
+        }
     }
 }
 
