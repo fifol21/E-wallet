@@ -5,9 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f3db411b-dc19-43a8-8387-44ea7e9acb9b" name="Changes" comment="updated">
-      <change afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/All_orders.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Customers.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Customers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/DatabaseConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/DatabaseConnector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/HelloController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Orders.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Orders.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Pending_orders.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Pending_orders.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Vehicles.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Vehicles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/src/main/resources/com/example/delivery/vehicle.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/resources/com/example/delivery/vehicle.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/HelloController.class" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/HelloController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/Orders.class" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/Orders.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +25,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>

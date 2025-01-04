@@ -95,16 +95,16 @@ public class Orders {
             add_order.show();
 
         }catch (IllegalArgumentException e) {
-            ErrorAlert(e.getMessage(), "Error");
+            HelloApplication.ErrorAlert(e.getMessage(), "Error");
             e.printStackTrace();
         }catch (NullPointerException e) {
-            ErrorAlert("Error Class:", "Customer is null");
+            HelloApplication.ErrorAlert("Error Class:", "Customer is null");
             e.printStackTrace();
         }catch (IOException e){
-            ErrorAlert("Error:", "FXML load error");
+            HelloApplication.ErrorAlert("Error:", "FXML load error");
             e.printStackTrace();
         }catch (Exception e ) {
-            ErrorAlert("Error:", "Error occured try again");
+            HelloApplication.ErrorAlert("Error:", "Error occured try again");
             e.printStackTrace();
         }
     }
@@ -132,13 +132,7 @@ public class Orders {
             throw new IllegalArgumentException("Error: Iffragile is incorrect (it has to be true or false)");
         }
     }
-    public void ErrorAlert(String message, String title) {
-        Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle(title);
-        alert.setHeaderText(null);
-        alert.setContentText(message);
-        alert.showAndWait();
-    }
+
 
 
     public void onphonenumberfield(ActionEvent actionEvent) {
@@ -178,12 +172,12 @@ public class Orders {
             String cost;
             String packageID;
             if (search_orderID == null || search_orderID.isEmpty() || !search_orderID.matches("^[0-9]+$")) {
-                ErrorAlert("Order ID should be numeric", "Error");
+                HelloApplication.ErrorAlert("Order ID should be numeric", "Error");
             } else {
                 UpdateStatus UpdateStatusController = fxmlLoader.getController();
                 Order read_from_db = AppContext.getOrderDAO().readOrder(Integer.parseInt(search_orderID), AppContext.getPackageDAO());
                 if(read_from_db == null){
-                    ErrorAlert("There is not such a order", "Error");
+                    HelloApplication.ErrorAlert("There is not such a order", "Error");
                     Stage stage = (Stage) searchbyorderid.getScene().getWindow();
                     stage.close();
                 }else{

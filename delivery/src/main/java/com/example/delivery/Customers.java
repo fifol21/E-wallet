@@ -35,7 +35,9 @@ public class Customers {
             HelloApplication.changescene("after_login.fxml");
             Stage stage = (Stage) backButton.getScene().getWindow();
             stage.close();
-        } catch (IOException e) {
+        } catch (RuntimeException e) {
+            HelloApplication.ErrorAlert("Error in loading scene", "Error");
+        }catch (Exception e) {
             e.printStackTrace();
         }
 
@@ -68,16 +70,16 @@ public class Customers {
             stage.close();
 
         }catch (IllegalArgumentException e) {
-            ErrorAlert( e.getMessage(), "Error");
+            HelloApplication.ErrorAlert( e.getMessage(), "Error");
             e.printStackTrace();
         }catch (NullPointerException e) {
-            ErrorAlert("Error Class:", "Customer is null");
+            HelloApplication.ErrorAlert("Error Class:", "Customer is null");
             e.printStackTrace();
         }catch (IOException e){
-            ErrorAlert("Error:", "FXML load error");
+            HelloApplication.ErrorAlert("Error:", "FXML load error");
             e.printStackTrace();
         }catch (Exception e ){
-            ErrorAlert("Error:", "Error occured try again");
+            HelloApplication.ErrorAlert("Error:", "Error occured try again");
             e.printStackTrace();
         }
     }
@@ -94,13 +96,6 @@ public class Customers {
                 throw new IllegalArgumentException("Error: contact is incorrect (it has to be numeric) [123]");
             }
         }
-    public void ErrorAlert(String message, String title) {
-        Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle(title);
-        alert.setHeaderText(null);
-        alert.setContentText(message);
-        alert.showAndWait();
-    }
 
     public void onDisplayInfo(ActionEvent actionEvent) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("searchCustomer.fxml"));
@@ -115,12 +110,12 @@ public class Customers {
         String Customer_ID;
 
         if(contact == null || contact.isEmpty() || !contact.matches("^[0-9]+$")){
-            ErrorAlert("Customer ID has to be alphanumeric", "Error");
+            HelloApplication.ErrorAlert("Customer ID has to be alphanumeric", "Error");
         }else{
             SearchCustomer SearchCustomerController = fxmlLoader.getController();
             Customer read_from_db = AppContext.getCustomerDAO().readCustomer(Integer.parseInt(contact));
             if(read_from_db == null){
-                ErrorAlert("Customer not found", "Error");
+                HelloApplication.ErrorAlert("Customer not found", "Error");
                 Stage stage = (Stage) customeridfield.getScene().getWindow();
                 stage.close();
             }else{
@@ -129,6 +124,8 @@ public class Customers {
                 Customer_ID = String.valueOf(read_from_db.getCustomerID());
                 SearchCustomerController.setInfo(contact,name,address,Customer_ID);
             }
+            searchCustomer_stage.setScene(scene);
+            searchCustomer_stage.show();
 
         }
 

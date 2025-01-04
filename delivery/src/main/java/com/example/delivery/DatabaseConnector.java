@@ -17,7 +17,9 @@ public class DatabaseConnector {
 
             } catch (SQLException e) {
                 e.printStackTrace();
-                throw new RuntimeException("Failed to connect to database");
+            }catch (RuntimeException e) {
+                HelloApplication.ErrorAlert("Error in connection to database", "Error");
+
             }
         }return connection;
     }

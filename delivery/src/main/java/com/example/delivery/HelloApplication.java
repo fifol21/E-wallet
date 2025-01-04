@@ -3,6 +3,7 @@ package com.example.delivery;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -32,6 +33,13 @@ public class HelloApplication extends Application {
         newstage.show();
         stg.close();
         stg=newstage;
+    }
+    public static void ErrorAlert(String message, String title) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
     }
 
     public void addCustomer(String name, String address, String phone,CustomerDAO customerDAO) {
