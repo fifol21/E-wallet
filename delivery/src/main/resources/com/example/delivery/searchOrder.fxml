@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.delivery.UpdateStatus">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.delivery.UpdateStatus">
     <top>
         <AnchorPane prefHeight="95.0" prefWidth="600.0" BorderPane.alignment="CENTER">
             <children>
@@ -28,7 +25,7 @@
                 <Label layoutX="173.0" layoutY="114.0" text="Status" textFill="#e5ff00" />
                 <Label layoutX="59.0" layoutY="166.0" textFill="#e5ff00" />
                 <Label layoutX="149.0" layoutY="157.0" text="Vehicle ID" textFill="#e5ff00" />
-                <Button fx:id="backButton" layoutX="39.0" layoutY="279.0" mnemonicParsing="false" onAction="#onbackButton" style="-fx-background-color: e5ff00;" text="Back" />
+                <Button fx:id="backButton" layoutX="25.0" layoutY="266.0" mnemonicParsing="false" onAction="#onbackButton" style="-fx-background-color: e5ff00;" text="Back" />
                 <Label layoutX="177.0" layoutY="195.0" text="Cost" textFill="#eaff00" />
                 <Label layoutX="146.0" layoutY="237.0" text="Package ID" textFill="#d2fc4b" />
             </children>
@@ -43,7 +40,7 @@
                 <TextField fx:id="statusfield" layoutX="45.0" layoutY="112.0" onAction="#onstatusfield" promptText="Status" />
                 <TextField fx:id="vehicleidfield" layoutX="45.0" layoutY="152.0" promptText="Vehicle ID" />
                 <TextField fx:id="costfield" layoutX="45.0" layoutY="192.0" promptText="Cost" />
-                <Button fx:id="updatestatusButton" layoutX="77.0" layoutY="279.0" mnemonicParsing="false" onAction="#onupdatestatusButton" style="-fx-background-color: e5ff00;" text="Update Status" />
+                <Button fx:id="updatestatusButton" layoutX="68.0" layoutY="266.0" mnemonicParsing="false" onAction="#onupdatestatusButton" style="-fx-background-color: e5ff00;" text="Update Status" />
                 <TextField fx:id="packageidfield" layoutX="45.0" layoutY="233.0" onAction="#onweightfield" promptText="Package ID" />
             </children>
         </AnchorPane>

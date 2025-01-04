@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.delivery.SearchVehicle">
+    <top>
+        <AnchorPane prefHeight="95.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label layoutX="141.0" layoutY="25.0" prefHeight="67.0" prefWidth="332.0" text="MileDeliverEX" textFill="#c0c907">
+                    <font>
+                        <Font name="System Bold" size="55.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+    </top>
+    <left>
+        <AnchorPane prefHeight="305.0" prefWidth="146.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label layoutX="97.0" layoutY="29.0" text="VehicleID" textFill="#e5ff00" />
+                <Label layoutX="89.0" layoutY="65.0" text="Vehicle type" textFill="#e5ff00" />
+                <Label layoutX="98.0" layoutY="97.0" text="Capacity" textFill="#e5ff00" />
+                <Button fx:id="backButton" layoutX="57.0" layoutY="247.0" mnemonicParsing="false" onAction="#onbackButton" style="-fx-background-color: e5ff00;" text="Back" />
+            <Label layoutX="109.0" layoutY="129.0" text="Load" textFill="#e1ff00" />
+            <Label layoutX="88.0" layoutY="167.0" text="Is Available ?" textFill="#e3ff00" />
+            </children>
+        </AnchorPane>
+    </left>
+    <center>
+        <AnchorPane prefHeight="270.0" prefWidth="347.0" BorderPane.alignment="CENTER">
+            <children>
+                <TextField fx:id="vehicleidfield" layoutX="47.0" layoutY="21.0" promptText="VehicleID" />
+                <TextField fx:id="typefield" layoutX="47.0" layoutY="56.0" promptText="Vehicle type" />
+                <TextField fx:id="capacityfield" layoutX="47.0" layoutY="93.0" promptText="Max capacity" />
+            <TextField fx:id="loadfield" layoutX="47.0" layoutY="128.0" promptText="Load" />
+            <TextField fx:id="availablefield" layoutX="47.0" layoutY="167.0" promptText="Available ?" />
+            </children>
+        </AnchorPane>
+    </center>
+    <right>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+    </right>
+</BorderPane>
