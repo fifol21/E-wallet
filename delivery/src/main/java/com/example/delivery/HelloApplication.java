@@ -40,6 +40,7 @@ public class HelloApplication extends Application {
         alert.setHeaderText(null);
         alert.setContentText(message);
         alert.showAndWait();
+
     }
 
     public void addCustomer(String name, String address, String phone,CustomerDAO customerDAO) {

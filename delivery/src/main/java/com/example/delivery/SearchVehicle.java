@@ -26,7 +26,8 @@ public class SearchVehicle {
         vehicleidfield.setText(vehicleid);
         typefield.setText(type);
         capacityfield.setText(capacity);
-        availablefield.setText(load);
+        availablefield.setText(isavailable);
+        loadfield.setText(load);
     }
 
     public void onbackButton(ActionEvent actionEvent) throws IOException {
