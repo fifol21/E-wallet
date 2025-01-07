@@ -38,8 +38,8 @@ public class SearchCustomer {
     public void onUpdateCustomerButton(ActionEvent actionEvent) {
         String name = namefield.getText();
         String address = addressfield.getText();
-        String customer_ID = contactfield.getText();
-        String contact = customeridfield.getText();
+        String contact = contactfield.getText();
+        String customer_ID = customeridfield.getText();
 
         Customer update = new Customer(Integer.parseInt(customer_ID), name, address, contact);
         AppContext.getCustomerDAO().UpdateCustomer(update);

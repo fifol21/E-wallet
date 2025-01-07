@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f3db411b-dc19-43a8-8387-44ea7e9acb9b" name="Changes" comment="updated">
+    <list default="true" id="f3db411b-dc19-43a8-8387-44ea7e9acb9b" name="Changes" comment="Added vehicle display and corrected ErrorAlert as a static method in main class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/CustomerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/CustomerDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Customers.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Customers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/SearchCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/SearchCustomer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Tests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Vehicles.java" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/src/main/java/com/example/delivery/Vehicles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/Customers.class" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/Customers.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/HelloApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/HelloController.class" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/HelloController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/HelloApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/target/classes/com/example/delivery/HelloApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/target/classes/klodka.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +25,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="piwo" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -97,7 +90,7 @@
       <recent name="com.example.delivery" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.JDBC.java">
     <configuration name="JDBC" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.delivery.JDBC" />
       <module name="delivery" />
@@ -116,6 +109,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.JDBC" />
+        <item itemvalue="Application.JDBC" />
         <item itemvalue="Application.JDBC" />
         <item itemvalue="Application.JDBC" />
         <item itemvalue="Application.JDBC" />
@@ -147,6 +142,21 @@
       <workItem from="1735248342121" duration="18640000" />
       <workItem from="1735495553279" duration="913000" />
       <workItem from="1735504068322" duration="1887000" />
+      <workItem from="1735950567343" duration="7000" />
+      <workItem from="1735950619055" duration="443000" />
+      <workItem from="1735992928257" duration="526000" />
+      <workItem from="1736023120592" duration="9000" />
+      <workItem from="1736023200298" duration="637000" />
+      <workItem from="1736027404733" duration="723000" />
+      <workItem from="1736070089001" duration="12000" />
+      <workItem from="1736114408020" duration="47000" />
+      <workItem from="1736199973128" duration="1040000" />
+      <workItem from="1736203744956" duration="11000" />
+      <workItem from="1736245565469" duration="4000" />
+      <workItem from="1736246982204" duration="1334000" />
+      <workItem from="1736252535825" duration="373000" />
+      <workItem from="1736253519474" duration="702000" />
+      <workItem from="1736270362044" duration="554000" />
     </task>
     <task id="LOCAL-00001" summary="added queryExecutor and DatabaseConnector classes">
       <option name="closed" value="true" />
@@ -252,7 +262,23 @@
       <option name="project" value="LOCAL" />
       <updated>1735919891728</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Added vehicle display and corrected ErrorAlert as a static method in main class">
+      <option name="closed" value="true" />
+      <created>1735949883656</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1735949883656</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Added vehicle display and corrected ErrorAlert as a static method in main class">
+      <option name="closed" value="true" />
+      <created>1735950052169</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1735950052169</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,6 +294,7 @@
     <MESSAGE value="added singleton pattern" />
     <MESSAGE value="Exception problem resolved ( Orders, Customers,Vehicles)" />
     <MESSAGE value="updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated" />
+    <MESSAGE value="Added vehicle display and corrected ErrorAlert as a static method in main class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added vehicle display and corrected ErrorAlert as a static method in main class" />
   </component>
 </project>
