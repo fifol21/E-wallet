@@ -23,6 +23,8 @@ public class Tests {
 //        System.out.println(vehicles.get(0).getVehicleID());
 //        System.out.println(AppContext.getLoginService().login("worker123","strongPassword"));
 //        System.out.println(AppContext.getCustomerDAO().getLastCustomer().getCustomerID());
-        System.out.println(AppContext.getOrderDAO().getPendingOrders());
+//        System.out.println(AppContext.getOrderDAO().getPendingOrders());
+        Customer updated = new Customer(3,"mariusz","bogdaniec","997997988");
+        AppContext.getCustomerDAO().UpdateCustomer(updated);
     }
 }

@@ -29,19 +29,26 @@ public class SearchCustomer {
     }
 
     public void setInfo(String contact, String name, String address, String customerID) {
-        contactfield.setText(contact);
+        customeridfield.setText(customerID);
         namefield.setText(name);
         addressfield.setText(address);
-        contactfield.setText(customerID);
+        contactfield.setText(contact);
     }
 
     public void onUpdateCustomerButton(ActionEvent actionEvent) {
-        String name = namefield.getText();
-        String address = addressfield.getText();
-        String customer_ID = contactfield.getText();
-        String contact = customeridfield.getText();
+        try {
+            String name = namefield.getText();
+            String address = addressfield.getText();
+            String contact = contactfield.getText();
+            String customer_ID = customeridfield.getText();
 
-        Customer update = new Customer(Integer.parseInt(customer_ID), name, address, contact);
-        AppContext.getCustomerDAO().UpdateCustomer(update); // nie wiem czy to jest ok, bo nie ma metody update Customer
+            Customer updated = new Customer(Integer.parseInt(customer_ID), name, address, contact);
+            AppContext.getCustomerDAO().UpdateCustomer(updated); // nie wiem czy to jest ok, bo nie ma metody update Customer
+
+            Stage stage = (Stage) UpdateCustomerButton.getScene().getWindow();
+            stage.close();
+        }catch(Exception e) {
+            e.printStackTrace();
+        }
     }
 }

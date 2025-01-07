@@ -113,7 +113,7 @@ public class Customers {
             HelloApplication.ErrorAlert("Customer ID has to be alphanumeric", "Error");
         }else{
             SearchCustomer SearchCustomerController = fxmlLoader.getController();
-            Customer read_from_db = AppContext.getCustomerDAO().readCustomer(Integer.parseInt(contact));
+            Customer read_from_db = AppContext.getCustomerDAO().readCustomer(contact);
             if(read_from_db == null){
                 HelloApplication.ErrorAlert("Customer not found", "Error");
                 Stage stage = (Stage) customeridfield.getScene().getWindow();

@@ -57,7 +57,8 @@ public class CustomerDAO {
         try(PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setString(1,customer.getName());
             stmt.setString(2,customer.getAddress());
-            stmt.setString(3,customer.getAddress());
+            stmt.setString(3,customer.getContactNumber());
+            stmt.setInt(4,customer.getCustomerID());
             stmt.executeUpdate();
         }catch(SQLException e){
             e.printStackTrace();

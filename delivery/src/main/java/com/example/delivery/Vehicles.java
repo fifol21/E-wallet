@@ -98,7 +98,7 @@ public class Vehicles {
     }
 
     public void onDisplayInfoButton(ActionEvent actionEvent) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("searchvehicle.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("searhcvehicle.fxml"));
         Stage search_vehicle_stage = new Stage();
         search_vehicle_stage.setTitle("Information about Vehicle");
         search_vehicle_stage.setResizable(false);

@@ -37,7 +37,7 @@ public class HelloController {
             String password = passwordfield.getText();
             String username = usernameTEXTFIELD.getText();
 
-           // if(AppContext.getLoginService().login(username, password)) {
+           if(AppContext.getLoginService().login(username, password)) {
                 FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("after_login.fxml"));
                 Stage second_stage = new Stage();
                 second_stage.setResizable(false);
@@ -46,9 +46,9 @@ public class HelloController {
                 second_stage.show();
                 Stage stage = (Stage) usernameTEXTFIELD.getScene().getWindow();
                 stage.close();
-            //}else{
-             //Hello.Application.ErrorLogin_Alert("You do not have access to Company Systems!","Wrong Credentials");
-            //}
+            }else{
+             ErrorLogin_Alert("You do not have access to Company Systems!","Wrong Credentials");
+            }
         } catch (IOException e) {
             e.printStackTrace();
             System.out.println("Error");
