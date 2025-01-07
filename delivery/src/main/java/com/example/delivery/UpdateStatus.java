@@ -25,6 +25,12 @@ public class UpdateStatus {
     @FXML
     public TextField packageidfield;
     @FXML
+    public Button AcceptButton;
+    @FXML
+    public Button PendingButton;
+    @FXML
+    public Button DeliveredButton;
+    @FXML
     private Button backButton;
 
     public void setInfo(String order_id,String customer_id, String destination, String status, String vehicle_id, String cost, String package_id){
@@ -67,4 +73,14 @@ public class UpdateStatus {
         Stage stage = (Stage) updatestatusButton.getScene().getWindow();
         stage.close();
     }
+
+    public void onAcceptButton(ActionEvent actionEvent) {
+       statusfield.setText("Accepted");
+    }
+
+    public void onPendingButton(ActionEvent actionEvent) {
+        statusfield.setText("Pending");
+    }
+
+    public void onDeliveredButton(ActionEvent actionEvent) {statusfield.setText("Delivered");}
 }
