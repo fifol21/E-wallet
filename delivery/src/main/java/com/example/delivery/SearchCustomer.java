@@ -42,6 +42,6 @@ public class SearchCustomer {
         String contact = customeridfield.getText();
 
         Customer update = new Customer(Integer.parseInt(customer_ID), name, address, contact);
-        AppContext.getCustomerDAO().UpdateCustomer(update); // nie wiem czy to jest ok, bo nie ma metody update Customer
+        AppContext.getCustomerDAO().UpdateCustomer(update);
     }
 }

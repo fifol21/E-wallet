@@ -46,6 +46,12 @@
         </AnchorPane>
     </center>
     <right>
-        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="AcceptButton" layoutX="52.0" layoutY="40.0" mnemonicParsing="false" onAction="#onAcceptButton" style="-fx-background-color: e5ff00;" text="ACCEPTED" />
+            <Button fx:id="PendingButton" layoutX="55.0" layoutY="82.0" mnemonicParsing="false" onAction="#onPendingButton" prefHeight="28.0" prefWidth="78.0" style="-fx-background-color: e5ff00;" text="PENDING" />
+            <Button fx:id="DeliveredButton" layoutX="53.0" layoutY="128.0" mnemonicParsing="false" onAction="#onDeliveredButton" style="-fx-background-color: e5ff00;" text="DELIVERED" />
+            <Label layoutX="39.0" layoutY="6.0" text="Change order status" textFill="#fbff00" />
+         </children></AnchorPane>
     </right>
 </BorderPane>
