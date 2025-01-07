@@ -95,6 +95,7 @@ public class HelloApplication extends Application {
         Order nowe = new Order(orderID,customerID,destination,status,vehicleID,cost,packageID);
 
         orderDAO.createOrder(nowe);
+        orderDAO.createHistory(orderID, status);
     }
 
     public List<Order> displayAllOrders(OrderDAO orderDAO) {

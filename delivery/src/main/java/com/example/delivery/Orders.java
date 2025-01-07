@@ -111,19 +111,18 @@ public class Orders {
         if (phonenumber == null|| phonenumber.isEmpty() || !phonenumber.matches("^[0-9]+$")) {
             throw new IllegalArgumentException("Error: phone number is incorrect (it has to be numeric) [123]");
         }
-        if (name==null || name.isEmpty()|| !name.matches("^[a-zA-Z]+$")) {
+        if (name==null || name.isEmpty()|| !name.matches("^[a-zA-Z ]+$")) {
             throw new IllegalArgumentException("Error: name is incorrect (it has to be numeric)[123]");
         }
-        if (destination==null || destination.isEmpty() || destination.matches("^[0-9]+$")) {
-            throw new IllegalArgumentException("Error: Destination is incorrect (it has to be alphanumeric)[abc]");
+        if (destination==null || destination.isEmpty()) {
+            throw new IllegalArgumentException("Error: Destination is incorrect");
         }
         if (status==null || status.isEmpty() || status.matches("^[0-9]+$")) {
             throw new IllegalArgumentException("Error: Status  is incorrect (it has to be alphanumeric) [abc]");
         }
-        if (address==null || address.isEmpty()|| !address.matches("^[a-zA-Z]+$")) {
-            throw new IllegalArgumentException("Error: address is incorrect (it has to be numeric) [123]");
-        }
-        if (weight==null || weight.isEmpty() || !weight.matches("^[0-9]+$")){
+        if (address==null || address.isEmpty()) {
+            throw new IllegalArgumentException("Error: address is incorrect");     }
+        if (weight==null || weight.isEmpty() || !weight.matches("^[0-9]+(\\.[0-9]+)$")){
             throw new IllegalArgumentException("Error: weight is incorrect (it has to be decimal) [123.123]");
         }
         if (iffragile==null || iffragile.isEmpty() || !iffragile.equalsIgnoreCase("true") && !iffragile.equalsIgnoreCase("false")) {

@@ -69,18 +69,20 @@ public class UpdateStatus {
 
         Order updated = new Order(Integer.parseInt(order_id),Integer.parseInt(customer_id),destination,status,Integer.parseInt(vehicle_id),Float.parseFloat(cost),Integer.parseInt(package_id));
         AppContext.getOrderDAO().updateOrder(updated);
-
+        AppContext.getOrderDAO().createHistory(Integer.parseInt(order_id),status);
         Stage stage = (Stage) updatestatusButton.getScene().getWindow();
         stage.close();
     }
 
     public void onAcceptButton(ActionEvent actionEvent) {
-       statusfield.setText("Accepted");
+       statusfield.setText("ACCEPTED");
     }
 
     public void onPendingButton(ActionEvent actionEvent) {
-        statusfield.setText("Pending");
+        statusfield.setText("PENDING");
     }
 
-    public void onDeliveredButton(ActionEvent actionEvent) {statusfield.setText("Delivered");}
+    public void onDeliveredButton(ActionEvent actionEvent) {
+        statusfield.setText("DELIVERED");
+    }
 }

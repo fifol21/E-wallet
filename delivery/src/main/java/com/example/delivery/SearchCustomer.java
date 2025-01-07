@@ -32,7 +32,7 @@ public class SearchCustomer {
         contactfield.setText(contact);
         namefield.setText(name);
         addressfield.setText(address);
-        contactfield.setText(customerID);
+        customeridfield.setText(customerID);
     }
 
     public void onUpdateCustomerButton(ActionEvent actionEvent) {
@@ -43,5 +43,7 @@ public class SearchCustomer {
 
         Customer update = new Customer(Integer.parseInt(customer_ID), name, address, contact);
         AppContext.getCustomerDAO().UpdateCustomer(update);
+        Stage stage = (Stage) UpdateCustomerButton.getScene().getWindow();
+        stage.close();
     }
 }

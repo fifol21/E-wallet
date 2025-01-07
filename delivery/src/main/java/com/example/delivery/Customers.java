@@ -98,11 +98,7 @@ public class Customers {
         }
 
     public void onDisplayInfo(ActionEvent actionEvent) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("searchCustomer.fxml"));
-        Stage searchCustomer_stage = new Stage();
-        searchCustomer_stage.setTitle("Information about Customer");
-        searchCustomer_stage.setResizable(false);
-        Scene scene = new Scene(fxmlLoader.load(),600,400);
+
 
         String contact = searchbyphonenumberfield.getText();
         String name;
@@ -112,20 +108,26 @@ public class Customers {
         if(contact == null || contact.isEmpty() || !contact.matches("^[0-9]+$")){
             HelloApplication.ErrorAlert("Customer ID has to be alphanumeric", "Error");
         }else{
-            SearchCustomer SearchCustomerController = fxmlLoader.getController();
             Customer read_from_db = AppContext.getCustomerDAO().readCustomer(contact);
             if(read_from_db == null){
                 HelloApplication.ErrorAlert("Customer not found", "Error");
-                Stage stage = (Stage) customeridfield.getScene().getWindow();
-                stage.close();
+//                Stage stage = (Stage) customeridfield.getScene().getWindow();
+//                stage.close();
             }else{
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("searchCustomer.fxml"));
+                Stage searchCustomer_stage = new Stage();
+                searchCustomer_stage.setTitle("Information about Customer");
+                searchCustomer_stage.setResizable(false);
+                Scene scene = new Scene(fxmlLoader.load(),600,400);
+                SearchCustomer SearchCustomerController = fxmlLoader.getController();
                 name = String.valueOf(read_from_db.getName());
                 address = String.valueOf(read_from_db.getAddress());
                 Customer_ID = String.valueOf(read_from_db.getCustomerID());
                 SearchCustomerController.setInfo(contact,name,address,Customer_ID);
+                searchCustomer_stage.setScene(scene);
+                searchCustomer_stage.show();
             }
-            searchCustomer_stage.setScene(scene);
-            searchCustomer_stage.show();
+
 
         }
 

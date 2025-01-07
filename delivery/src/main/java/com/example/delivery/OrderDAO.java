@@ -14,7 +14,7 @@ public class OrderDAO {
     public static OrderDAO getInstance(Connection connection_) {
         if (instance == null) {
             synchronized (OrderDAO.class) {
-                if(instance == null) {
+                if (instance == null) {
                     instance = new OrderDAO(connection_);
                 }
             }
@@ -129,10 +129,10 @@ public class OrderDAO {
         return orders;
     }
 
-    public List<Order> getPendingOrders(){
+    public List<Order> getPendingOrders() {
         String sql = "SELECT * FROM orders WHERE STATUS = 'PENDING'";
         List<Order> orders = new ArrayList<>();
-        try(PreparedStatement stmt = connection.prepareStatement(sql)){
+        try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             ResultSet rs = stmt.executeQuery();
             while (rs.next()) {
                 Order order = new Order(
@@ -146,7 +146,7 @@ public class OrderDAO {
                 );
                 orders.add(order);
             }
-        }catch(SQLException e){
+        } catch (SQLException e) {
             e.printStackTrace();
         }
         return orders;
@@ -167,5 +167,16 @@ public class OrderDAO {
             e.printStackTrace();
         }
         return orders_history;
+    }
+
+    public void createHistory(int order_id, String status) {
+        String sql = "INSERT INTO orders_history (ORDER_ID,STATUS) VALUES(?,?)";
+        try (PreparedStatement stmt = connection.prepareStatement(sql)) {
+            stmt.setInt(1, order_id);
+            stmt.setString(2, status);
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }
