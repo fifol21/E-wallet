@@ -232,5 +232,20 @@ public class Orders {
             e.printStackTrace();
         }
     }
+
+    public void onHistoryButton(ActionEvent actionEvent) {
+        try{
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Ordershistory.fxml"));
+        Stage search_order = new Stage();
+        search_order.setTitle("History of orders");
+        search_order.setResizable(false);
+        Scene scene = new Scene(fxmlLoader.load(), 600, 400);
+        search_order.setScene(scene);
+        search_order.show();
+    }catch(Exception e) {
+        e.printStackTrace();
+    }
+
+    }
 }
 
