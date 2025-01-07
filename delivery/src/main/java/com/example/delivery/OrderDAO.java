@@ -86,7 +86,7 @@ public class OrderDAO {
     }
 
     public Order getLastOrder() {
-        String sql = "SELECT * FROM orders ORDER BY ORDER_ID DESC LIMIT 1";
+        String sql = "SELECT * FROM orders ORDER BY ORDERS_ID DESC LIMIT 1";
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             ResultSet rs = stmt.executeQuery();
             if (rs.next()) {
@@ -150,5 +150,22 @@ public class OrderDAO {
             e.printStackTrace();
         }
         return orders;
+    }
+
+    public List<List<String>> get_orders_history() {
+        String sql = "SELECT * FROM orders_history";
+        List<List<String>> orders_history = new ArrayList<>();
+        try (PreparedStatement stmt = connection.prepareStatement(sql)) {
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+                List<String> update = new ArrayList<>();
+                update.add(String.valueOf(rs.getInt("ORDER_ID")));
+                update.add(rs.getString("STATUS"));
+                orders_history.add(update);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return orders_history;
     }
 }

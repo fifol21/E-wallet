@@ -85,7 +85,7 @@ public class PackageDAO {
             ResultSet rs = stmt.executeQuery();
             if(rs.next()) {
                 return new Package(
-                        rs.getInt("PACKGE_ID"),
+                        rs.getInt("PACKAGE_ID"),
                         rs.getFloat("WEIGHT"),
                         rs.getString("SIZE"),
                         rs.getBoolean("IF_FRAGILE")

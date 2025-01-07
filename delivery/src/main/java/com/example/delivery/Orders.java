@@ -29,8 +29,6 @@ public class Orders {
     @FXML
     private TextField destinationfield;
     @FXML
-    private TextField statusfield;
-    @FXML
     private TextField sizefield;
     @FXML
     private TextField weightfield;
@@ -72,7 +70,7 @@ public class Orders {
             String name = namefield.getText();
             String address = addressfield.getText();
             String destination = destinationfield.getText();
-            String status = statusfield.getText();
+            String status = "ACCEPTED";
             String weight = weightfield.getText();
             String iffragile = iffragilefield.getText();
             String size = sizefield.getText();

@@ -76,7 +76,9 @@ public class AddOrder {
         String iffragile = iffragilefield.getText();
         String size = sizefield.getText();
 
-        HelloApplication.createOrder(phonenumber,name,address,status,destination, size, Float.parseFloat(weight), Boolean.parseBoolean(iffragile),AppContext.getCustomerDAO(),AppContext.getPackageDAO(), AppContext.getOrderDAO(),AppContext.getVehicleDAO());;
+        HelloApplication.createOrder(phonenumber,name,address,status,destination, size, Float.parseFloat(weight), Boolean.parseBoolean(iffragile),AppContext.getCustomerDAO(),AppContext.getPackageDAO(), AppContext.getOrderDAO(),AppContext.getVehicleDAO());
+        Stage stage = (Stage) backButton.getScene().getWindow();
+        stage.close();
     }
 
     public void onphonenumberfield(ActionEvent actionEvent) {
