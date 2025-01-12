@@ -85,11 +85,11 @@ public class Customers {
     }
     public void checkInput(String name, String address, String contact) {
 
-            if (name == null || name.isEmpty()||!name.matches("^[a-zA-Z]+$")){
+            if (name == null || name.isEmpty()||!name.matches("^[a-zA-Z\\s]+$")){
                 throw new IllegalArgumentException("Error: name is incorrect (it has to be alphanumeric) [abc]");
 
             }
-            if (address == null || address.isEmpty()||!address.matches("^[a-zA-Z]+$")){
+            if (address == null || address.isEmpty()){
                 throw new IllegalArgumentException("Error: address is incorrect (it has to be alphanumeric) [abc]");
             }
             if (contact == null || contact.isEmpty()||!contact.matches("^[0-9]+$")){
