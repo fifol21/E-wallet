@@ -57,8 +57,8 @@ public class Vehicles {
             add_vehicle_stage.show();
 
 
-            Stage stage = (Stage) capacityfield.getScene().getWindow();
-            stage.close();
+//            Stage stage = (Stage) capacityfield.getScene().getWindow();
+//            stage.close();
 
         }catch (IllegalArgumentException e) {
             HelloApplication.ErrorAlert( e.getMessage(), "Error");

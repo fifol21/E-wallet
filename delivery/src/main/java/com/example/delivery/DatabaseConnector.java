@@ -6,9 +6,9 @@ public class DatabaseConnector {
     private static Connection connection;
 
     public static Connection getConnection() {
-        String url = "jdbc:mysql://localhost:3306/delivery_company_database";
-        String user = "root";
-        String password = "MYsql28@#";
+        String url = "jdbc:mysql://mysql.agh.edu.pl:3306/mbem1";
+        String user = "mbem1";
+        String password = "Lm5jf2Zjux0MtU9T";
         if(connection == null) {
             try {
                 connection = DriverManager.getConnection(url, user, password);

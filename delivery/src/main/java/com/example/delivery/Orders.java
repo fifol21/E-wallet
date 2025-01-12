@@ -111,8 +111,8 @@ public class Orders {
         if (phonenumber == null|| phonenumber.isEmpty() || !phonenumber.matches("^[0-9]+$")) {
             throw new IllegalArgumentException("Error: phone number is incorrect (it has to be numeric) [123]");
         }
-        if (name==null || name.isEmpty()|| !name.matches("^[a-zA-Z ]+$")) {
-            throw new IllegalArgumentException("Error: name is incorrect (it has to be numeric)[123]");
+        if (name==null || name.isEmpty()|| !name.matches("^[a-zA-Z\\s]+$")) {
+            throw new IllegalArgumentException("Error: name is incorrect (it has to contain only letter and spaces)");
         }
         if (destination==null || destination.isEmpty()) {
             throw new IllegalArgumentException("Error: Destination is incorrect");

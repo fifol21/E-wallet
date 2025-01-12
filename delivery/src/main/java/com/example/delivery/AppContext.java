@@ -2,7 +2,7 @@ package com.example.delivery;
 import java.sql.Connection;
 
 public class AppContext {
-    public static Connection connection = DatabaseConnector.getConnection();
+    public static Connection connection;
     public static CustomerDAO customerDAO;
     public static OrderDAO orderDAO;
     public static PackageDAO packageDAO;

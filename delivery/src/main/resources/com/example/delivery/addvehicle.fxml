@@ -23,8 +23,7 @@
         <AnchorPane prefHeight="305.0" prefWidth="146.0" BorderPane.alignment="CENTER">
             <children>
                 <Label layoutX="75.0" layoutY="28.0" text="VehicleID" textFill="#e5ff00" />
-                <Label layoutX="72.0" layoutY="59.0" text="Vehicle type" textFill="#e5ff00" />
-                <Label layoutX="83.0" layoutY="100.0" text="Capacity" textFill="#e5ff00" />
+                <Label layoutX="80.0" layoutY="60.0" text="Capacity" textFill="#e5ff00" />
                 <Button fx:id="backButton" layoutX="60.0" layoutY="266.0" mnemonicParsing="false" onAction="#onbackButton" style="-fx-background-color: e5ff00;" text="Back" />
             </children>
         </AnchorPane>
@@ -33,8 +32,7 @@
         <AnchorPane prefHeight="270.0" prefWidth="347.0" BorderPane.alignment="CENTER">
             <children>
                 <TextField fx:id="vehicleidfield" layoutX="47.0" layoutY="21.0" onAction="#onvehicleidfield" promptText="VehicleID" />
-                <TextField fx:id="typefield" layoutX="47.0" layoutY="56.0" onAction="#ontypefield" promptText="Vehicle type" />
-                <TextField fx:id="capacityfield" layoutX="47.0" layoutY="89.0" onAction="#oncapacityfield" promptText="Max capacity" />
+                <TextField fx:id="capacityfield" layoutX="47.0" layoutY="58.0" onAction="#oncapacityfield" promptText="Max capacity" />
                 <Button fx:id="confirmButton" layoutX="100.0" layoutY="266.0" mnemonicParsing="false" onAction="#onconfirmButton" style="-fx-background-color: e5ff00;" text="Confirm" />
             </children>
         </AnchorPane>

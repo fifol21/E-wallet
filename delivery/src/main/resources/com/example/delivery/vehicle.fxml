@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.delivery.Vehicles">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.delivery.Vehicles">
    <top>
       <AnchorPane prefHeight="95.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
@@ -20,8 +23,7 @@
       <AnchorPane prefHeight="305.0" prefWidth="146.0" BorderPane.alignment="CENTER">
          <children>
             <Label layoutX="75.0" layoutY="28.0" text="VehicleID" textFill="#e5ff00" />
-            <Label layoutX="72.0" layoutY="59.0" text="Vehicle type" textFill="#e5ff00" />
-            <Label layoutX="82.0" layoutY="95.0" text="Capacity" textFill="#e5ff00" />
+            <Label layoutX="77.0" layoutY="61.0" text="Capacity" textFill="#e5ff00" />
             <Button fx:id="backButton" layoutX="36.0" layoutY="266.0" mnemonicParsing="false" onAction="#onbackButton" style="-fx-background-color: e5ff00;" text="Back" />
          </children>
       </AnchorPane>
@@ -30,8 +32,7 @@
       <AnchorPane prefHeight="270.0" prefWidth="347.0" BorderPane.alignment="CENTER">
          <children>
             <TextField fx:id="vehicleidfield" layoutX="47.0" layoutY="21.0" onAction="#onvehicleidfield" promptText="VehicleID" />
-            <TextField fx:id="typefield" layoutX="47.0" layoutY="56.0" onAction="#ontypefield" promptText="Vehicle type" />
-            <TextField fx:id="capacityfield" layoutX="47.0" layoutY="93.0" onAction="#oncapacityfield" promptText="Max capacity" />
+            <TextField fx:id="capacityfield" layoutX="47.0" layoutY="56.0" onAction="#oncapacityfield" promptText="Max capacity" />
             <Button fx:id="addVehicleButton" layoutX="86.0" layoutY="266.0" mnemonicParsing="false" onAction="#onaddvehicleButton" style="-fx-background-color: e5ff00;" text="Add Vehicle" />
          </children>
       </AnchorPane>
