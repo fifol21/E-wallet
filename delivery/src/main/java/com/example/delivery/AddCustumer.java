@@ -10,25 +10,22 @@ import java.io.IOException;
 
 public class AddCustumer {
     @FXML
+    public TextField namefield;
+    @FXML
+    public TextField addressfield;
+    @FXML
+    public TextField numberfield;
+    @FXML
     private Button backButton;
     @FXML
     private Button confirmButton;
-    @FXML
-    private TextField customeridfield;
-    @FXML
-    private TextField orderidfield;
-    @FXML
-    private TextField destinationfield;
-    @FXML
-    private TextField statusfield;
 
     // ustawianie w polach tego co wpisalimy w pola klasy Customers BEZ WYJATKOW DO POPRAWY
 
-    public void setCustomer( String customerID, String name, String address, String contact) {
-        customeridfield.setText(customerID);
-        orderidfield.setText(name);
-        destinationfield.setText(address);
-        statusfield.setText(contact);
+    public void setCustomer( String name, String address, String contact) {
+        namefield.setText(name);
+        addressfield.setText(address);
+        numberfield.setText(contact);
 
     }
 
@@ -46,15 +43,13 @@ public class AddCustumer {
 
     public void onconfirmButton(ActionEvent actionEvent) {
         try {
-            String name = orderidfield.getText();
-            String address = destinationfield.getText();
-            String contact = statusfield.getText();
+            String name = namefield.getText();
+            String address = addressfield.getText();
+            String contact = numberfield.getText();
 
             Customer newCustomer = new Customer(name, address, contact, AppContext.getCustomerDAO());
             AppContext.getCustomerDAO().saveCustomer(newCustomer);
 
-            Stage stage = (Stage) confirmButton.getScene().getWindow();
-            stage.close();
         }catch(Exception e) {
             e.printStackTrace();
         }
@@ -63,15 +58,9 @@ public class AddCustumer {
     public void onnextButton(ActionEvent actionEvent) {
     }
 
-    public void onstatusfield(ActionEvent actionEvent) {
+    public void onaddressfield(ActionEvent actionEvent) {
     }
 
-    public void ondestinationfield(ActionEvent actionEvent) {
-    }
-
-    public void onorderidfield(ActionEvent actionEvent) {
-    }
-
-    public void oncustomerfield(ActionEvent actionEvent) {
+    public void onnumberfield(ActionEvent actionEvent) {
     }
 }

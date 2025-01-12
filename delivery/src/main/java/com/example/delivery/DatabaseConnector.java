@@ -12,8 +12,8 @@ public class DatabaseConnector {
         if(connection == null) {
             try {
                 connection = DriverManager.getConnection(url, user, password);
-                //                Statement statement = connection.createStatement();
-//                ResultSet resultSet = statement.executeQuery("SELECT * FROM customers");
+                        //      Statement statement = connection.createStatement();
+                //ResultSet resultSet = statement.executeQuery("SELECT * FROM customers");
 
             } catch (SQLException e) {
                 e.printStackTrace();
